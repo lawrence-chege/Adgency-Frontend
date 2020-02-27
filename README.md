@@ -1,2 +1,2 @@
-# Modella-Frontend
-A platform that allows brands and agencies to access a pool of highly trained models and also provide well-curated training materials to models
+# Adgency-Frontend
+A simple collaborative platform that automates the advertising process and allows companies and ad agencies to co-create advertisements in a structured and real-time manner.
