@@ -22,117 +22,198 @@
         </div>
     </nav>
     <form method="get" action="" onsubmit="return processForm()" class="client-form">
-        <div id="first-question" class="form-row" style="background-image: url(/img/ai.jpg);">
-            <h3>Product/Project</h3>
-            <label for="product">Tell us the name of the product/project</label>
-            <input id="product" name="product" type="text"/>
-            <span style="color:red" id="productError"></span>
-            <button type="button" id="btnFirstQuestion" class="btn">Next</button></br>
-            <hr>
+        <div id="first-question" class="form-row"
+        style="background-image: url(/img/product.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom,center;">
+            <div class="form-inner">
+                <h3>Product/Project</h3>
+                <label for="product">Tell us the name of the product/project</label>
+                <input id="product" name="product" type="text"/>
+                <span style="color:red" id="productError"></span>
+                <button type="button" id="btnFirstQuestion"
+                class="btn" onclick="processFirstQuestion()">Next</button></br>
+                <hr>
+            </div>
         </div>
-        <div id="second-question" class="form-row">
-            <h3>Overview of Communication</h3>
-            <label for="overview">What is the customer need?</label>
-            <input id="overview" name="overview" type="text"/>
-            <span style="color:red" id="overviewError"></span>
-            <button type="button" id="btnSecondQuestion" class="btn">Next</button></br>
-            <hr>
+        <div id="second-question" class="form-row"
+        style="background-image: url(/img/overview.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom,center;">
+            <div class="form-inner">
+                <h3>Overview of Communication</h3>
+                <label for="overview">What is the customer need?</label>
+                <input id="overview" name="overview" type="text"/>
+                <span style="color:red" id="overviewError"></span>
+                <button type="button" id="btnSecondQuestion"
+                class="btn" onclick="processSecondQuestion()">Next</button></br>
+                <hr>
+            </div>
         </div>
-        <div id="third-question" class="form-row">
-            <h3>Objective</h3>
-            <label for="objective">Why do we have to communicate this?</label>
-            <input id="objective" name="objective" type="text"/>
-            <span style="color:red" id="objectiveError"></span>
-            <button type="button" id="btnThirdQuestion" class="btn">Next</button></br>
-            <hr>
+        <div id="third-question" class="form-row"
+        style="background-image: url(/img/objective.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom,center;">
+            <div class="form-inner">
+                <h3>Objective</h3>
+                <label for="objective">Why do we have to communicate this?</label>
+                <input id="objective" name="objective" type="text"/>
+                <span style="color:red" id="objectiveError"></span>
+                <button type="button" id="btnThirdQuestion"
+                class="btn" onclick="processThirdQuestion()">Next</button></br>
+                <hr>
+            </div>
         </div>
-        <div id="fourth-question" class="form-row">
-            <h3>Duration</h3>
-            <label for="duration">How long is the communication expected to last?</label>
-            <input id="duration" name="duration" type="text"/>
-            <span style="color:red" id="durationError"></span>
-            <button type="button" id="btnFourthQuestion" class="btn">Next</button>
-            <br><hr>
+        <div id="fourth-question" class="form-row"
+        style="background-image: url(/img/duration.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom,center;">
+            <div class="form-inner">
+                <h3>Duration</h3>
+                <label for="duration">How long is the communication expected to last?</label>
+                <input id="duration" name="duration" type="text"/>
+                <span style="color:red" id="durationError"></span>
+                <button type="button" id="btnFourthQuestion" class="btn"
+                onclick="processFourthQuestion()">Next</button>
+                <br><hr>
+            </div>
         </div>
-        <div id="fifth-question" class="form-row">
-            <h3>Target Customers</h3>
-            <label for="target">Who do you want the communication to reach?</label>
-            <input id="target" name="target" type="text"/>
-            <span style="color:red" id="targetError"></span>
-            <button type="button" id="btnFifthQuestion" class="btn">Next</button>
-            </br>
-            <hr>
+        <div id="fifth-question" class="form-row"
+        style="background-image: url(/img/target.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom,center;">
+            <div class="form-inner">
+                <h3>Target Customers</h3>
+                <label for="target">Who do you want the communication to reach?</label>
+                <input id="target" name="target" type="text"/>
+                <span style="color:red" id="targetError"></span>
+                <button type="button" id="btnFifthQuestion" class="btn"
+                onclick="processFifthQuestion()">Next</button>
+                </br>
+                <hr>
+            </div>
         </div>
-        <div id="sixth-question" class="form-row">
-            <h3>Insight</h3>
-            <label for="insight">Why do you think the customer needs the product/project?</label>
-            <input id="insight" name="insight" type="text"/>
-            <span style="color:red" id="insightError"></span>
-            <button type="button" id="btnSixthQuestion" class="btn">Next</button></br>
-            <hr>
+        <div id="sixth-question" class="form-row"
+        style="background-image: url(/img/insight.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom,center;">
+            <div class="form-inner">
+                <h3>Insight</h3>
+                <label for="insight">Why do you think the customer needs the product/project?</label>
+                <input id="insight" name="insight" type="text"/>
+                <span style="color:red" id="insightError"></span>
+                <button type="button" id="btnSixthQuestion" class="btn"
+                onclick="processSixthQuestion()">Next</button></br>
+                <hr>
+            </div>
         </div>
-        <div id="seventh-question" class="form-row">
-            <h3>Unique Selling Proposition</h3>
-            <label for="usp">What makes your product special and competitive over others?</label>
-            <input id="usp" name="usp" type="text"/>
-            <span style="color:red" id="uspError"></span>
-            <button type="button" id="btnSeventhQuestion" class="btn">Next</button></br>
-            <hr>
+        <div id="seventh-question" class="form-row"
+        style="background-image: url(/img/usp.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom,center;">
+            <div class="form-inner">
+                <h3>Unique Selling Proposition</h3>
+                <label for="usp">What makes your product special and competitive over others?</label>
+                <input id="usp" name="usp" type="text"/>
+                <span style="color:red" id="uspError"></span>
+                <button type="button" id="btnSeventhQuestion" class="btn"
+                onclick="processSeventhQuestion()">Next</button></br>
+                <hr>
+            </div>
         </div>
-        <div id="eighth-question" class="form-row">
-            <h3>Mood</h3>
-            <label for="mood">What tone would you want your brand to communicate?</label>
-                <select name="mood" id="mood">
-                    <option value="c">Confident</option>
-                    <option value="r">Reassuring</option>
-                    <option value="cm">Comic</option>
-                    <option value="e">Educational</option>
-                    <option value="f">Feminine</option>
-                    <option value="s">Serious</option>
-                </select>
-            <span style="color:red" id="moodError"></span>
-            <button type="button" id="btnEighthQuestion" class="btn">Next</button></br>
-            <hr>
+        <div id="eighth-question" class="form-row"
+        style="background-image: url(/img/mood.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom,center;">
+            <div class="form-inner">
+                <h3>Mood</h3>
+                <label for="mood">What tone would you want your brand to communicate?</label>
+                    <select name="mood" id="mood">
+                        <option value="c">Confident</option>
+                        <option value="r">Reassuring</option>
+                        <option value="cm">Comic</option>
+                        <option value="e">Educational</option>
+                        <option value="f">Feminine</option>
+                        <option value="s">Serious</option>
+                    </select>
+                <span style="color:red" id="moodError"></span>
+                <button type="button" id="btnEighthQuestion" class="btn"
+                onclick="processEighthQuestion()">Next</button></br>
+                <hr>
+            </div>
         </div>
-        <div id="ninth-question" class="form-row">
-            <h3>Style</h3>
-            <label for="style">What is your preferred style of communication?</label>
-                <select name="style" id="style">
-                    <option value="fa">Formal & Aggressive</option>
-                    <option value="a">Assertive</option>
-                    <option value="i">Informal</option>
-                    <option value="fr">Friendly</option>
-                </select>
-            <span style="color:red" id="styleError"></span>
-            <button type="button" id="btnNinthQuestion" class="btn">Next</button></br>
-            <hr>
+        <div id="ninth-question" class="form-row"
+        style="background-image: url(/img/style.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom,center;">
+            <div class="form-inner">
+                <h3>Style</h3>
+                <label for="style">What is your preferred style of communication?</label>
+                    <select name="style" id="style">
+                        <option value="fa">Formal & Aggressive</option>
+                        <option value="a">Assertive</option>
+                        <option value="i">Informal</option>
+                        <option value="fr">Friendly</option>
+                    </select>
+                <span style="color:red" id="styleError"></span>
+                <button type="button" id="btnNinthQuestion" class="btn"
+                onclick="processNinthQuestion()">Next</button></br>
+                <hr>
+            </div>
         </div>
-        <div id="tenth-question" class="form-row">
-            <h3>Requirement</h3>
-            <label for="requirement">What materials do you expect us to produce?</label>
-                <select name="requirement" id="requirement">
-                    <option value="l">Logo</option>
-                    <option value="rs">Radio Script</option>
-                    <option value="ts">TV Script</option>
-                    <option value="bc">Billboard Concept</option>
-                    <option value="pc">Print Concept</option>
-                </select>
-            <span style="color:red" id="requirementError"></span>
-            <button type="button" id="btnTenthQuestion" class="btn">Next</button></br>
-            <hr>
+        <div id="tenth-question" class="form-row"
+        style="background-image: url(/img/requirement.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom,center;">
+            <div class="form-inner">
+                <h3>Requirement</h3>
+                <label for="requirement">What materials do you expect us to produce?</label>
+                    <select name="requirement" id="requirement">
+                        <option value="l">Logo</option>
+                        <option value="rs">Radio Script</option>
+                        <option value="ts">TV Script</option>
+                        <option value="bc">Billboard Concept</option>
+                        <option value="pc">Print Concept</option>
+                    </select>
+                <span style="color:red" id="requirementError"></span>
+                <button type="button" id="btnTenthQuestion" class="btn"
+                onclick="processTenthQuestion()">Next</button></br>
+                <hr>
+            </div>
         </div>
-        <div id="eleventh-question" class="form-row">
-            <h3>Other Information</h3>
-            <label for="other">
-                What other information would you want to share with us?
-                <em>(Also mention if there is any particular thing that should be added to the communication)</em>
-            </label>
-            <textarea name="other" id="other" cols="30" rows="10"></textarea>
-            <span style="color:red" id="otherError"></span>
-            <button type="button" id="btnEleventhQuestion" class="btn">Next</button></br>
-            <hr>
+        <div id="eleventh-question" class="form-row"
+        style="background-image: url(/img/other.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom,center;">
+            <div class="form-inner">
+                <h3>Other Information</h3>
+                <label for="other">
+                    What other information would you want to share with us?
+                    <em>(Also mention if there is any particular thing that should be added to the communication)</em>
+                </label>
+                <textarea name="other" id="other" cols="30" rows="10"></textarea>
+                <span style="color:red" id="otherError"></span>
+                <button type="button" id="btnEleventhQuestion" class="btn"
+                onclick="processEleventhQuestion()">Next</button></br>
+                <hr>
+            </div>
         </div>
-        <div id="last-stage" class="form-row">
+        <div id="last-stage" class="form-row"
+        style="background-image: url(/img/other.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom,center;">
             <h3>Confirm Details</h3>
             <p id="popproduct"></p>
             <p id="popoverview"></p>
@@ -155,5 +236,6 @@
             const $gallery=$('.gallery a').simplelightbox();
         })
     </script>
+    <script src="dist/js/main.js"></script>
 </body>
 </html>
