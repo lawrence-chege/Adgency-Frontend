@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 3 | Dashboard</title>
+  <title>Concept</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="dist/css/extra.css">
   <!-- overlayScrollbars -->
   <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
   <!-- Daterange picker -->
@@ -26,6 +27,7 @@
   <link rel="stylesheet" href="plugins/summernote/summernote-bs4.css">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Source+Sans+Pro&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/78fb37d7fa.js" crossorigin="anonymous"></script>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed" onload="getConcept()">
@@ -74,7 +76,7 @@
               <li class="nav-item">
                 <a href="#" class="nav-link active">
                   <i class="fa fa-info-circle nav-icon"></i>
-                  <p>Concept</p>
+                  <p >Concept</p>
                 </a>
               </li>
               <li class="nav-item">
@@ -241,8 +243,9 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Dashboard</h1>
+            <h1 class="m-0 text-dark"></h1>
           </div><!-- /.col -->
+          <div id="concept"></div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
@@ -253,10 +256,48 @@
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
-
+    <div class="card bg-light mb-3 concept" style="width: 68rem; padding-left: 4rem;">
+      <div class="card-header"><h1>Presented Concept</h1></div>
+      <div class="card-body first">
+        <img src="img/bottle.jpg" alt="bottle" width="200px" height="250px">
+        <div class="product">
+          <h5 class="card-title">Product</h5>
+          <p class="card-text" id="product">Bottle</p>
+          <h5 class="card-title">Category</h5>
+          <p class="card-text" id="category">Consumer Good</p>
+          <h5 class="card-title">Overview</h5>
+          <p class="card-text" id="overview">The consumer needs a fancy water bottle that they can carry around</p>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card concept" style="width: 60rem;">
+          <div class="card-header">
+            <h5>Objectives</h5>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item" id="objective-one"><p>Cras justo odio</p></li>
+            <li class="list-group-item" id="objective-two"><p>Cras justo odio</p></li>
+            <li class="list-group-item" id="objective-three"><p>Cras justo odio</p></li>
+          </ul>
+        </div>
+        <div class="product">
+          <h5 class="card-title">Duration</h5>
+          <p class="card-text" id="duration">Five Minutes</p>
+          <h5 class="card-title">Insight</h5>
+          <p class="card-text" id="insight">A customer requested for the product.</p>
+          <h5 class="card-title">Unique Selling Point</h5>
+          <p class="card-text" id="usp">The water bottle is clear and unbreakable</p>
+          <h5 class="card-title">Tone</h5>
+          <p class="card-text" id="tone">Comic</p>
+          <h5 class="card-title">Style</h5>
+          <p class="card-text" id="style">Friendly</p>
+          <h5 class="card-title">Platform Requirement</h5>
+          <p class="card-text" id="requirement">TV Script</p>
+          <h5 class="card-title">Other Information</h5>
+          <p class="card-text" id="other">I would love you to produce social media graphics too</p>
+        </div>
+    </div>
     <!-- Main content -->
-
-
   <footer class="main-footer">
     <strong>Copyright &copy;<a href="http://adminlte.io">Adgency</a>.</strong>
     All rights reserved.
@@ -306,5 +347,39 @@
 <script src="dist/js/demo.js"></script>
 
 <script src="dist/js/get-concept.js"></script>
+  <!-- jQuery -->
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <!-- jQuery UI 1.11.4 -->
+  <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+  <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+  <script>
+    $.widget.bridge('uibutton', $.ui.button)
+  </script>
+  <!-- Bootstrap 4 -->
+  <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- ChartJS -->
+  <script src="plugins/chart.js/Chart.min.js"></script>
+  <!-- Sparkline -->
+  <script src="plugins/sparklines/sparkline.js"></script>
+  <!-- JQVMap -->
+  <script src="plugins/jqvmap/jquery.vmap.min.js"></script>
+  <script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+  <!-- jQuery Knob Chart -->
+  <script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+  <!-- daterangepicker -->
+  <script src="plugins/moment/moment.min.js"></script>
+  <script src="plugins/daterangepicker/daterangepicker.js"></script>
+  <!-- Tempusdominus Bootstrap 4 -->
+  <script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+  <!-- Summernote -->
+  <script src="plugins/summernote/summernote-bs4.min.js"></script>
+  <!-- overlayScrollbars -->
+  <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+  <!-- AdminLTE App -->
+  <script src="dist/js/adminlte.js"></script>
+  <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+  <script src="dist/js/pages/dashboard.js"></script>
+  <!-- AdminLTE for demo purposes -->
+  <script src="dist/js/demo.js"></script>
 </body>
 </html>
