@@ -46,8 +46,8 @@ const platform_requirement = document.getElementById('platform_requirement')
 //       style: "friendly"
 //       duration: "1 year"
 //       project: "42cd9d24-3cc6-4af2-8c7f-cb1257c9be94"
-//       created_by: 3
-//       updated_by: 3
+
+
 //     }]){
 //       affected_rows
 //     }

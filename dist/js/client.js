@@ -96,9 +96,9 @@ const registerUser = () => {
 // 25VePqlfJDd5m0uru0KwZZb3o9nff84k
 // http://localhost:3000/callback
 
-https://dev-adgency.auth0.com/login?client=25VePqlfJDd5m0uru0KwZZb3o9nff84k&protocol=oauth2&response_type=token%20id_token&redirect_uri=http://localhost:3000/callback&scope=openid%20profile
+// https://dev-adgency.auth0.com/login?client=25VePqlfJDd5m0uru0KwZZb3o9nff84k&protocol=oauth2&response_type=token%20id_token&redirect_uri=http://localhost:3000/callback&scope=openid%20profile
 
-https://dev-adgency.auth0.com/authorize?response_type=token&client_id=ORFCpttcO6pShuNMrF7KIsZlOcaQ8Tdx&c&redirect_uri=http://localhost:5500
+// https://dev-adgency.auth0.com/authorize?response_type=token&client_id=ORFCpttcO6pShuNMrF7KIsZlOcaQ8Tdx&c&redirect_uri=http://localhost:5500
 
 // https://dev-adgency.auth0.com/login?client=Jbd1QS2Cm1cx0x0UCygBhnFipQhuxoUx&protocol=oauth2&response_type=token%20id_token&redirect_uri=http://localhost:3000&scope=openid%20profile
 
@@ -111,3 +111,5 @@ https://dev-adgency.auth0.com/authorize?response_type=token&client_id=ORFCpttcO6
 //     }
 //     return headers;
 //   };
+
+// https://dev-adgency.auth0.com/login?client=zf5csznvCn2e18XK8mBZlP9rgicwvAhd=oauth2&response_type=token%20id_token&redirect_uri=http://localhost:5500/callback&scope=openid%20profile
