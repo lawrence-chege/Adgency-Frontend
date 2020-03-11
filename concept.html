@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/78fb37d7fa.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="dist/css/simple-lightbox.min.css">
+    <link rel="stylesheet" href="dist/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Caladea|Cookie&display=swap" rel="stylesheet">
+    <title>Join us!</title>
+    <style>
+        .hidden {
+        display: none;
+        }
+
+        label {
+        margin-bottom: 10px;
+        display: block;
+        }
+    
+    </style>
+</head>
+<body id="home">
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">Adgency</h1>
+            <ul class="nav">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="new-container">
+        <div><button onclick="getConcept()">GET</button></div>
+        <div class="login-container">
+            
+        </div>
+    </div>
+    <h2>SPA Authentication Sample</h2>
+    <p>Welcome to our page!</p>
+    <button id="btn-login" disabled="true" onclick="login()">Log in</button>
+    <button id="btn-logout" disabled="true" onclick="logout()">Log out</button>
+    
+    <div class="hidden" id="gated-content">
+        <p>
+          You're seeing this content because you're currently
+          <strong>logged in</strong>.
+        </p>
+        <label>
+          Access token:
+          <pre id="ipt-access-token"></pre>
+        </label>
+        <label>
+          User profile:
+          <pre id="ipt-user-profile"></pre>
+        </label>
+      </div>
+    
+    
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="dist/js/simple-lightbox.min.js"></script>
+    <script src="https://cdn.auth0.com/js/auth0-spa-js/1.2/auth0-spa-js.production.js"></script>
+    <script src="dist/js/main.js"></script>
+    <script src="dist/js/auth0.js"></script>
+    <script src="dist/js/get-concept.js"></script>
+</body>
+</html>
