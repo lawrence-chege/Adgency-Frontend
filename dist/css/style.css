@@ -138,7 +138,7 @@ img{
 
 /*First Value*/
 .first-value{
-    background-image:url("/img/bkd.jpg");
+    background-image:url("../../img/login.svg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom,center;
