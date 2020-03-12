@@ -82,7 +82,7 @@ img{
 /*First Section*/
 .section-a{
     position:relative;
-    background-image:url("https://i.ibb.co/68GqKBq/landing.jpg");
+    background-image:url("../../img/landing.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom,center;
@@ -301,7 +301,7 @@ img{
 
 /*REGISTRATION PAGE*/
 .new-container{
-    background-image:url("/img/login-bkd.svg");
+    background-image:url("../../img/login-bkd.svg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom,center;
@@ -420,7 +420,7 @@ form h2{
 
 /*CLIENT DETAILS PAGE*/
 .client-container{
-    background-image:url("/img/client-details-bkd.svg");
+    background-image:url("../../img/client-details-bkd.svg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom,center;
