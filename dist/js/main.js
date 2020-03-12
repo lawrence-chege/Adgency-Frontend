@@ -96,19 +96,6 @@ function processThirdQuestion(){
     _('fifth-question').style.display = 'block';
 }
 
-function processFourthQuestion(){
-    var duration = _('duration').value;
-
-    //Validate Duration
-    if((duration == "") || (!isNaN(duration))){
-        _('durationError').innerHTML = "Please enter the objective and make sure that it is a number";
-        return false;
-    }
-
-    //Hide Current Question and Show Next
-    _('fourth-question').style.display = 'none';
-    _('eleventh-question').style.display = 'block';
-}
 
 function processFifthQuestion(){
     // var target = _('target').value;
@@ -152,7 +139,7 @@ function processSeventhQuestion(){
     _('eigth-question').style.display = 'block';
 }
 
-function processEighthQuestion(){
+function processEigthQuestion(){
     // var mood = _('mood').value;
 
     // //Validate USP
@@ -162,10 +149,23 @@ function processEighthQuestion(){
     // }
 
     //Hide Current Question and Show Next
-    _('eighth-question').style.display = 'none';
-    _('fourth-question').style.display = 'block';
+    _('eigth-question').style.display = 'none';
+    _('eleventh-question').style.display = 'block';
 }
 
+// function processFourthQuestion(){
+//     var duration = _('duration').value;
+
+//     //Validate Duration
+//     // if((duration == "") || (!isNaN(duration))){
+//     //     _('durationError').innerHTML = "Please enter the objective and make sure that it is a number";
+//     //     return false;
+//     // }
+
+//     //Hide Current Question and Show Next
+//     _('fourth-question').style.display = 'none';
+//     _('eleventh-question').style.display = 'block';
+// }
 
 
 function processEleventhQuestion(){

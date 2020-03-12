@@ -26,7 +26,7 @@
         </div>
     </nav>
     <section class="concept-form">
-            <form method="get" action="" onsubmit="return processForm()" class="client-form" >
+            <form method="get" action="dashboard.html" onsubmit="return processForm()" class="client-form" >
                     <div id="first-question" class="form-row justify-content-md-center">
                         <div class="container-md">
                             <div class="row">
@@ -114,15 +114,15 @@
             
                                     <div class="form-group ">
                                         <label for="product">Who do you want to reach?</label>
-                                        <input type="textarea" placeholder=" Group short decription: milenials"
-                                            class="form-control " id="description" aria-describedby="emailHelp">
+                                        <input type="textarea" placeholder="Group decription:"
+                                            class="form-control " id="description" aria-describedby="emailHelp"><br>
                                         <input type="textarea" placeholder="Age Group" class="form-control " id="age"
-                                            aria-describedby="emailHelp">
+                                            aria-describedby="emailHelp"><br>
                                         <input type="textarea" placeholder=" location" class="form-control " id="Location"
-                                            aria-describedby="emailHelp">
+                                            aria-describedby="emailHelp"><br>
                                         <select id="category" class="form-control">
-                                            <option selected>Gender...</option>
-                                            <option> Male</option>
+                                            <option selected> Choose Gender...</option>
+                                            <option>Male</option>
                                             <option>Female</option>
                                             <option>Both</option>
                                         </select>
@@ -222,7 +222,7 @@
                                         <label for="product">How would you like to communicate your brand?</label>
                                         <select id="tone" class="form-control">
                                             <option selected>Choose Tone...</option>
-                                            <option> Confident</option>
+                                            <option>Confident</option>
                                             <option>Reassuring</option>
                                             <option>Educational</option>
                                             <option>Comic</option>
@@ -267,7 +267,7 @@
                                             class="form-control " id="duration" aria-describedby="emailHelp">
                                         <span style="color:red" id="durationError"></span>
                                         <button type="button" id="btnFirstQuestion" class="btn btn-info"
-                                            onclick="processEighthQuestion()">Next</button></br>
+                                            onclick="processEigthQuestion()">Next</button></br>
                                     </div>
             
                                 </div>
@@ -318,8 +318,8 @@
                                         <input type="textarea" placeholder="Extra Information" class="form-control " id="duration"
                                             aria-describedby="emailHelp">
                                         <span style="color:red" id="durationError"></span>
-                                        <button type="button" id="btnFirstQuestion" class="btn btn-info"
-                                            onclick="processEleventhQuestion()">Submit</button></br>
+                                        <input type="button" id="btnFirstQuestion" class="btn btn-info"
+                                            onclick="processEleventhQuestion()" value="Submit"></button></br>
                                     </div>
             
                                 </div>
