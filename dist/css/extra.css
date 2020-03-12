@@ -35,3 +35,11 @@ h1{
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 1rem;
 }
+
+.main-sidebar{
+    background-color: #132D7D;
+}
+
+/* .content-header{
+    background-color: rgba(255, 145, 77, 0.7);
+} */
