@@ -224,13 +224,13 @@ img{
 }
 
 /*First Value*/
-.first-value{
+/* .first-value{
     background-image:url("../../img/login.svg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom,center;
     height:400px;
-}
+} */
 
 .first-value .container{
     display:grid;
