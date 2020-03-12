@@ -144,23 +144,46 @@ const getConcept = () => {
             console.log(result);
             let concept_data = document.getElementById('concept');
             concept_data.innerHTML = '';
-            concept_data.innerHTML += '<div> <h1> Concept: '+ name + '</h1>'+
-                                        '<p> Category: '+ category + '</p>'+
-                                        '<p> Overview: '+ overview + '</p>'+
-                                        '<p> Tone: '+ tone + '</p>'+
-                                        '<p> Style: '+ style + '</p>'+
-                                        '<p> Duration: '+ duration + '</p>'+
-                                        '<p> Objectives: <ul><li>'+ objective_point+ '</li></ul></p>'+
-                                        '<p> Target Audience: <p> Description: '+ audience_name+ '</p>'+
-                                        '<p> Age Group: '+ audience_age + '</p>'+
-                                        '<p> Gender: '+ audience_gender + '</p>'+
-                                        '<p> Location: '+ audience_location + '</p></p>'+
-                                        '<p> Platform: <p> Name: '+ platform_name + '</p>'+
-                                        '<p> Requirement: '+ platform_req + '</p></p>'+
-                                        '<p> Unique Selling Point: <ul><li>'+ usp+ '</li></ul></p>'+
-                                        '<p> Insights: <ul><li>'+ insight_point+ '</li></ul></p>'+
-                                        '<p> Extra Information: <ul><li>'+ info_point+ '</li></ul></p></div>'
-                                        
+            concept_data.innerHTML += '<div class="card-header"><h1>Presented Concept</h1></div>'+
+                                        '<div class="card-body first">'+
+                                           ' <img src="img/bottle.jpg" alt="bottle" width="200px" height="250px">'+
+                                            '<div class="product">'+
+                                            '<h5 class="card-title">Product</h5>'+
+                                            '<p class="card-text" id="product"> ' + name+'</p>'+
+                                            '<h5 class="card-title">Category</h5>'+
+                                            '<p class="card-text" id="category"> '+ category+ '</p>'+
+                                            '<h5 class="card-title">Overview</h5>'+
+                                            '<p class="card-text" id="overview">'+overview+'</p>'+
+                                            '</div>'+
+                                        '</div>'+
+                                        '<div class="card-body">'+
+                                            '<div class="card concept" style="width: 60rem;">'+
+                                            '<div class="card-header">'+
+                                                '<h5>Objectives</h5>'+
+                                            '</div>'+
+                                            '<ul class="list-group list-group-flush">'+
+                                                '<li class="list-group-item" id="objective-one"><p>'+ objective_point+'</p></li>'+
+                                                '<li class="list-group-item" id="objective-two"><p>'+ objective_point+'</p></li>'+
+                                                '<li class="list-group-item" id="objective-three"><p>'+ objective_point+'</p></li>'+
+                                            '</ul>'+
+                                            '</div>'+
+                                            '<div class="product">'+
+                                            '<h5 class="card-title">Duration</h5>' +
+                                            '<p class="card-text" id="duration">'+ duration +'</p>'+
+                                            '<h5 class="card-title">Insight</h5>'+
+                                            '<p class="card-text" id="insight">'+ insight_point +'.</p>'+
+                                            '<h5 class="card-title">Unique Selling Point</h5>'+
+                                            '<p class="card-text" id="usp">'+ usp+'</p>'+
+                                            '<h5 class="card-title">Tone</h5>'+
+                                            '<p class="card-text" id="tone">'+ tone +'</p>'+
+                                            '<h5 class="card-title">Style</h5>'+
+                                            '<p class="card-text" id="style">'+ objective_point+'</p>'+
+                                            '<h5 class="card-title">Platform Requirement</h5>'+
+                                            '<p class="card-text" id="requirement">'+ platform_req +'</p>'+
+                                            '<h5 class="card-title">Other Information</h5>'+
+                                            '<p class="card-text" id="other">'+ info_point+'</p>'+
+                                            '</div>'
+                                                                            
 
             
 
