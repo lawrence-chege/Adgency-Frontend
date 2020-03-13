@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/78fb37d7fa.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="dist/css/simple-lightbox.min.css">
     <link rel="stylesheet" href="dist/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Caladea|Cookie&display=swap" rel="stylesheet">
     <title>Enter your Creative Brief</title>
 </head>
-<body id="home">
+
+<body id="home"  >
     <nav class="navbar">
         <div class="container">
             <h1 class="logo">Adgency</h1>
@@ -21,203 +25,386 @@
             </ul>
         </div>
     </nav>
-    <form method="get" action="" onsubmit="return processForm()" class="client-form">
-        <div id="first-question" class="form-row"
-        style="background-image: url(/img/product.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: bottom,center;">
-            <div class="form-inner">
-                <h3>Product/Project</h3>
-                <label for="product">Tell us the name of the product/project</label>
-                <input id="product" name="product" type="text"/>
-                <span style="color:red" id="productError"></span>
-                <button type="button" id="btnFirstQuestion"
-                class="btn" onclick="processFirstQuestion()">Next</button></br>
-                <hr>
+    <section class="concept-form">
+            <form method="get" action="dashboard.html" onsubmit="return processForm()" class="client-form" >
+                    <div id="first-question" class="form-row justify-content-md-center">
+                        <div class="container-md">
+                            <div class="row">
+                                <div class="col-md-6 justify-content-md-center">
+            
+                                    <h3>Product Name</h3>
+            
+                                    <div class="form-group ">
+                                        <label for="product">What product/service do you want to promote?</label>
+                                        <input type="textarea" placeholder="Product Name" class="form-control " id="product"
+                                            aria-describedby="emailHelp">
+                                        <span style="color:red" id="productError"></span><br>
+                                        <button type="button" id="btnFirstQuestion" class="btn btn-info"
+                                            onclick="processFirstQuestion()">Next</button></br>
+                                    </div>
+            
+                                </div>
+            
+                            </div>
+            
+            
+                        </div>
+            
+                    </div>
+                    <div id="product-category" class="form-row justify-content-md-center">
+                        <div class="container-md">
+                            <div class="row">
+                                <div class="col-md-6 justify-content-md-center position-relative">
+            
+                                    <h3>Product Category</h3>
+            
+                                    <div class="form-group ">
+                                        <label for="product">What industrial category is your product?</label>
+                                        <select id="category" class="form-control">
+                                            <option selected>Choose category...</option>
+                                            <option> Food and Beverage</option>
+                                            <option>Cosmetics</option>
+                                            <option>Software</option>
+                                            <option>Home Apliances</option>
+                                            <option>Clothing</option>
+                                        </select>
+                                        <span style="color:red" id="categoryError"></span><br>
+                                        <button type="button" id="btnFirstQuestion" class="btn btn-info"
+                                            onclick="processCategory()">Next</button></br>
+                                    </div>
+            
+                                </div>
+            
+                            </div>
+            
+            
+                        </div>
+            
+                    </div>
+                    <div id="second-question" class="form-row">
+                        <div class="container-md">
+                            <div class="row">
+                                <div class="col-md-6 justify-content-md-center">
+            
+                                    <h3>Promotion Overview</h3>
+            
+                                    <div class="form-group ">
+                                        <label for="product">What is the customer need?</label>
+                                        <input type="textarea" placeholder="Overview" class="form-control " id="overview"
+                                            aria-describedby="emailHelp">
+                                        <span style="color:red" id="overviewError"></span>
+                                        <button type="button" id="btnFirstQuestion" class="btn btn-info"
+                                            onclick="processSecondQuestion()">Next</button></br>
+                                    </div>
+            
+                                </div>
+            
+                            </div>
+            
+            
+                        </div>
+            
+                    </div>
+                    <div id="target-customers" class="form-row">
+                        <div class="container-md">
+                            <div class="row">
+                                <div class="col-md-6 justify-content-md-center">
+            
+                                    <h3>Target Customers</h3>
+            
+                                    <div class="form-group ">
+                                        <label for="product">Who do you want to reach?</label>
+                                        <input type="textarea" placeholder="Group decription:"
+                                            class="form-control " id="description" aria-describedby="emailHelp"><br>
+                                        <input type="textarea" placeholder="Age Group" class="form-control " id="age"
+                                            aria-describedby="emailHelp"><br>
+                                        <input type="textarea" placeholder=" location" class="form-control " id="Location"
+                                            aria-describedby="emailHelp"><br>
+                                        <select id="category" class="form-control">
+                                            <option selected> Choose Gender...</option>
+                                            <option>Male</option>
+                                            <option>Female</option>
+                                            <option>Both</option>
+                                        </select>
+                                        <button type="button" id="btnFirstQuestion" class="btn btn-info"
+                                            onclick="processCustomers()">Next</button></br>
+                                    </div>
+            
+                                </div>
+            
+                            </div>
+            
+            
+                        </div>
+            
+                    </div>
+                    <div id="third-question" class="form-row">
+                        <div class="container-md">
+                            <div class="row">
+                                <div class="col-md-6 justify-content-md-center">
+            
+                                    <h3>Objective</h3>
+            
+                                    <div class="form-group ">
+                                        <label for="product">Why do we have to communicate this?</label>
+                                        <input type="textarea" placeholder="objective" class="form-control " id="objective"
+                                            aria-describedby="emailHelp">
+                                        <span style="color:red" id="objectiveError"></span>
+                                        <button type="button" id="btnFirstQuestion" class="btn btn-info"
+                                            onclick="processThirdQuestion()">Next</button></br>
+                                    </div>
+            
+                                </div>
+            
+                            </div>
+            
+            
+                        </div>
+            
+                    </div>
+                    
+                    <div id="fifth-question" class="form-row">
+                        <div class="container-md">
+                            <div class="row">
+                                <div class="col-md-6 justify-content-md-center">
+            
+                                    <h3>Unique Selling Points</h3>
+            
+                                    <div class="form-group ">
+                                        <label for="product">What makes your product special and competitive over others?</label>
+                                        <input type="textarea" placeholder="Unique selling point" class="form-control "
+                                            id="duration" aria-describedby="emailHelp">
+                                        <span style="color:red" id="durationError"></span>
+                                        <button type="button" id="btnFirstQuestion" class="btn btn-info"
+                                            onclick="processFifthQuestion()">Next</button></br>
+                                    </div>
+            
+                                </div>
+            
+                            </div>
+            
+            
+                        </div>
+            
+                    </div>
+                    <div id="sixth-question" class="form-row">
+                        <div class="container-md">
+                            <div class="row">
+                                <div class="col-md-6 justify-content-md-center">
+            
+                                    <h3>Insight</h3>
+            
+                                    <div class="form-group ">
+                                        <label for="product">Why do you think the customer needs the product?</label>
+                                        <input type="textarea" placeholder="Insight" class="form-control " id="duration"
+                                            aria-describedby="emailHelp">
+                                        <span style="color:red" id="durationError"></span>
+                                        <button type="button" id="btnFirstQuestion" class="btn btn-info"
+                                            onclick="processSixthQuestion()">Next</button></br>
+                                    </div>
+            
+                                </div>
+            
+                            </div>
+            
+            
+                        </div>
+            
+                    </div>
+                    <div id="seventh-question" class="form-row">
+                        <div class="container-md">
+                            <div class="row">
+                                <div class="col-md-6 justify-content-md-center">
+            
+                                    <h3>Tone and Style </h3>
+            
+                                    <div class="form-group ">
+                                        <label for="product">How would you like to communicate your brand?</label>
+                                        <select id="tone" class="form-control">
+                                            <option selected>Choose Tone...</option>
+                                            <option>Confident</option>
+                                            <option>Reassuring</option>
+                                            <option>Educational</option>
+                                            <option>Comic</option>
+                                        </select><br>
+                                        <select id="style" class="form-control">
+                                            <option value="fa" selected>Choose Style ..</option>
+                                            <option value="a">Assertive</option>
+                                            <option value="i">Informal</option>
+                                            <option value="fr">Friendly</option>
+                                        </select>
+                                        <span style="color:red" id="durationError"></span>
+                                        <button type="button" id="btnFirstQuestion" class="btn btn-info"
+                                            onclick="processSeventhQuestion()">Next</button></br>
+                                    </div>
+            
+                                </div>
+            
+                            </div>
+            
+            
+                        </div>
+            
+                    </div>
+                    <div id="eigth-question" class="form-row">
+                        <div class="container-md">
+                            <div class="row">
+                                <div class="col-md-6 justify-content-md-center">
+            
+                                    <h3>Platform </h3>
+            
+                                    <div class="form-group ">
+                                        <label for="product">What platfrom would you like to use?</label>
+                                        <select id="tone" class="form-control">
+                                            <option value="l" selected>Choose Platform</option>
+                                            <option value="rs">Radio</option>
+                                            <option value="ts">TV </option>
+                                            <option value="bc">Billboard </option>
+                                            <option value="pc">Print Concept</option>
+                                            <option value="pc">Social media</option>
+                                        </select><br>
+                                        <input type="textarea" placeholder="What do you require from us? ie script, design"
+                                            class="form-control " id="duration" aria-describedby="emailHelp">
+                                        <span style="color:red" id="durationError"></span>
+                                        <button type="button" id="btnFirstQuestion" class="btn btn-info"
+                                            onclick="processEigthQuestion()">Next</button></br>
+                                    </div>
+            
+                                </div>
+            
+                            </div>
+            
+            
+                        </div>
+            
+                    </div>
+                    <div id="fourth-question" class="form-row">
+                        <div class="container-md">
+                            <div class="row">
+                                <div class="col-md-6 justify-content-md-center">
+            
+                                    <h3>Duration</h3>
+            
+                                    <div class="form-group ">
+                                        <label for="product">How long will this promotion last?</label>
+                                        <input type="textarea" placeholder="duration" class="form-control " id="duration"
+                                            aria-describedby="emailHelp">
+                                        <span style="color:red" id="durationError"></span>
+                                        <button type="button" id="btnFirstQuestion" class="btn btn-info"
+                                            onclick="processFouthQuestion()">Next</button></br>
+                                    </div>
+            
+                                </div>
+            
+                            </div>
+            
+            
+                        </div>
+            
+                    </div>
+                    <div id="eleventh-question" class="form-row">
+                        <div class="container-md">
+                            <div class="row">
+                                <div class="col-md-6 justify-content-md-center">
+            
+                                    <h3>Extra Information</h3>
+            
+                                    <div class="form-group ">
+                                        <label for="other">
+                                            What other information would you want to share with us?
+                                            <em>(Also mention if there is any particular thing that should be added to the
+                                                communication)</em>
+                                        </label>
+                                        <input type="textarea" placeholder="Extra Information" class="form-control " id="duration"
+                                            aria-describedby="emailHelp">
+                                        <span style="color:red" id="durationError"></span>
+                                        <input type="button" id="btnFirstQuestion" class="btn btn-info"
+                                            onclick="processEleventhQuestion()" value="Submit"></button></br>
+                                    </div>
+            
+                                </div>
+            
+                            </div>
+            
+            
+                        </div>
+            
+                    </div>
+            
+                </form>
+    </section>
+    <footer class="section-footer">
+            <div class="container">
+                <div>
+                    <h3>CONTACT US</h3>
+                    <a href="http://twitter.com">
+                        <i class="fab fa-twitter fa-2x"></i>
+                    </a>
+                    <a href="http://fcebook.com">
+                        <i class="fab fa-facebook fa-2x"></i>
+                    </a>
+                    <a href="http://instagram.com">
+                        <i class="fab fa-instagram fa-2x"></i>
+                    </a>
+                </div>
+                <div>
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Customer Stories</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Testimonials</h3>
+                    <ul>
+                        <li><a href="#">Collaboration</a></li>
+                        <li><a href="#">Ideation</a></li>
+                        <li><a href="#">Conceptualization</a></li>
+                        <li><a href="#">Final Product</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Subscribe</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <form name="email-form" method="POST" data-netlify="true">
+                        <div class="email-form">
+                            <span class="form-control-wrap">
+                                <input
+                                type="email"
+                                name="email"
+                                id="email"
+                                size="40"
+                                class="form-control"
+                                placeholder="Email">
+                            </span>
+                            <button type="submit" class="form-control submit">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
-        </div>
-        <div id="second-question" class="form-row"
-        style="background-image: url(/img/overview.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: bottom,center;">
-            <div class="form-inner">
-                <h3>Category</h3>
-                <label for="category">What is the category of the product?</label>
-                <input id="category" name="category" type="text"/>
-                <h3>Overview of Communication</h3>
-                <label for="overview">What is the customer need?</label>
-                <input id="overview" name="overview" type="text"/>
-                <span style="color:red" id="overviewError"></span>
-                <button type="button" id="btnSecondQuestion"
-                class="btn" onclick="processSecondQuestion()">Next</button></br>
-                <hr>
-            </div>
-        </div>
-        <div id="third-question" class="form-row"
-        style="background-image: url(/img/objective.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: bottom,center;">
-            <div class="form-inner">
-                <h3>Objective</h3>
-                <label for="objective">Why do we have to communicate this?</label>
-                <input id="objective" name="objective" type="text"/>
-                <span style="color:red" id="objectiveError"></span>
-                <button type="button" id="btnThirdQuestion"
-                class="btn" onclick="processThirdQuestion()">Next</button></br>
-                <hr>
-            </div>
-        </div>
-        <div id="fourth-question" class="form-row"
-        style="background-image: url(/img/duration.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: bottom,center;">
-            <div class="form-inner">
-                <h3>Duration</h3>
-                <label for="duration">How long is the communication expected to last?</label>
-                <input id="duration" name="duration" type="text"/>
-                <span style="color:red" id="durationError"></span>
-                <button type="button" id="btnFourthQuestion" class="btn"
-                onclick="processFourthQuestion()">Next</button>
-                <br><hr>
-            </div>
-        </div>
-        <div id="fifth-question" class="form-row"
-        style="background-image: url(/img/target.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: bottom,center;">
-            <div class="form-inner">
-                <h3>Target Customers</h3>
-                <label for="target">Who do you want the communication to reach?</label>
-                <input id="target" name="target" type="text"/>
-                <span style="color:red" id="targetError"></span>
-                <button type="button" id="btnFifthQuestion" class="btn"
-                onclick="processFifthQuestion()">Next</button>
-                </br>
-                <hr>
-            </div>
-        </div>
-        <div id="sixth-question" class="form-row"
-        style="background-image: url(/img/insight.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: bottom,center;">
-            <div class="form-inner">
-                <h3>Insight</h3>
-                <label for="insight">Why do you think the customer needs the product/project?</label>
-                <input id="insight" name="insight" type="text"/>
-                <span style="color:red" id="insightError"></span>
-                <button type="button" id="btnSixthQuestion" class="btn"
-                onclick="processSixthQuestion()">Next</button></br>
-                <hr>
-            </div>
-        </div>
-        <div id="seventh-question" class="form-row"
-        style="background-image: url(/img/usp.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: bottom,center;">
-            <div class="form-inner">
-                <h3>Unique Selling Proposition</h3>
-                <label for="usp">What makes your product special and competitive over others?</label>
-                <input id="usp" name="usp" type="text"/>
-                <span style="color:red" id="uspError"></span>
-                <button type="button" id="btnSeventhQuestion" class="btn"
-                onclick="processSeventhQuestion()">Next</button></br>
-                <hr>
-            </div>
-        </div>
-        <div id="eighth-question" class="form-row"
-        style="background-image: url(/img/mood.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: bottom,center;">
-            <div class="form-inner">
-                <h3>Tone</h3>
-                <label for="tone">What tone would you want your brand to communicate?</label>
-                    <select name="tone" id="tone">
-                        <option value="c">Confident</option>
-                        <option value="r">Reassuring</option>
-                        <option value="cm">Comic</option>
-                        <option value="e">Educational</option>
-                        <option value="f">Feminine</option>
-                        <option value="s">Serious</option>
-                    </select>
-                <span style="color:red" id="moodError"></span>
-                <button type="button" id="btnEighthQuestion" class="btn"
-                onclick="processEighthQuestion()">Next</button></br>
-                <hr>
-            </div>
-        </div>
-        <div id="ninth-question" class="form-row"
-        style="background-image: url(/img/style.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: bottom,center;">
-            <div class="form-inner">
-                <h3>Style</h3>
-                <label for="style">What is your preferred style of communication?</label>
-                    <select name="style" id="style">
-                        <option value="fa">Formal & Aggressive</option>
-                        <option value="a">Assertive</option>
-                        <option value="i">Informal</option>
-                        <option value="fr">Friendly</option>
-                    </select>
-                <span style="color:red" id="styleError"></span>
-                <button type="button" id="btnNinthQuestion" class="btn"
-                onclick="processNinthQuestion()">Next</button></br>
-                <hr>
-            </div>
-        </div>
-        <div id="tenth-question" class="form-row"
-        style="background-image: url(/img/requirement.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: bottom,center;">
-            <div class="form-inner">
-                <h3>Platform Requirement</h3>
-                <label for="requirement">What materials do you expect us to produce?</label>
-                    <select name="requirement" id="requirement">
-                        <option value="l">Logo</option>
-                        <option value="rs">Radio Script</option>
-                        <option value="ts">TV Script</option>
-                        <option value="bc">Billboard Concept</option>
-                        <option value="pc">Print Concept</option>
-                    </select>
-                <span style="color:red" id="requirementError"></span>
-                <button type="button" id="btnTenthQuestion" class="btn"
-                onclick="processTenthQuestion()">Next</button></br>
-                <hr>
-            </div>
-        </div>
-        <div id="eleventh-question" class="form-row"
-        style="background-image: url(/img/other.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: bottom,center;">
-            <div class="form-inner">
-                <h3>Other Information</h3>
-                <label for="other">
-                    What other information would you want to share with us?
-                    <em>(Also mention if there is any particular thing that should be added to the communication)</em>
-                </label>
-                <textarea name="other" id="other" cols="30" rows="10"></textarea>
-                <span style="color:red" id="otherError"></span>
-                <button>Submit</button></br>
-                <hr>
-            </div>
-    </form>
+        </footer>
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="dist/js/simple-lightbox.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
     <script>
-        $(function(){
-            const $gallery=$('.gallery a').simplelightbox();
+        $(function () {
+            const $gallery = $('.gallery a').simplelightbox();
         })
     </script>
     <script src="dist/js/main.js"></script>
 </body>
+
 </html>

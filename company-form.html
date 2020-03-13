@@ -7,45 +7,42 @@
     <link rel="stylesheet" href="dist/css/simple-lightbox.min.css">
     <link rel="stylesheet" href="dist/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Caladea|Cookie&display=swap" rel="stylesheet">
-    <title>Cient Details | Company</title>
+    <title>Join us!</title>
 </head>
 <body id="home">
     <nav class="navbar">
         <div class="container">
             <h1 class="logo">Adgency</h1>
             <ul class="nav">
-                <li><a href="landingpage.html">Home</a></li>
-                <li><a href="landingpage.html">Features</a></li>
-                <li><a href="landingpage.html">Benefits</a></li>
-                <li><a href="landingpage.html">Pricing</a></l
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#pricing">Pricing</a></li>
             </ul>
         </div>
     </nav>
-    <div class="client-container">
-        <div class="invite-container">
-            <form action="poc.html" onsubmit>
-                <h2>What company are you currently working with?</h2>
+    <div class="new-container">
+        <div></div>
+        <div class="login-container">
+            <form action="registration.html" onsubmit>
+                <h2>What is the name of your Agency?</h2>
                 <div class="input-div one">
                     <div class="i">
-                        <i class="fas fa-building"></i>
+                        <i class="fas fa-user"></i>
                     </div>
                     <div>
                         <h5>Company Name</h5>
-                        <input type="text" class="input">
+                        <input type="text" class="input" id="company_name">
                     </div>
                 </div>
-               <input type="submit" class="btn" value="Next" onclick="registerClient()">
+                <input type="submit" class="btn" value="Next" onclick="registerCompany()">
+               
             </form>
         </div>
-        <div></div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="dist/js/simple-lightbox.min.js"></script>
-    <script>
-        $(function(){
-            const $gallery=$('.gallery a').simplelightbox();
-        })
-    </script>
     <script src="dist/js/main.js"></script>
+    <script src="dist/js/client.js"></script>
 </body>
 </html>

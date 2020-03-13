@@ -19,7 +19,7 @@ inputs.forEach(input =>{
 
 /**CONCEPT SUBMIT PAGE*/
 //Global Variables
-var product, overview, objective, duration, target, insight, usp, mood,
+var product, overview, objective, duration, target, insight, usp, mood,category
 style, requirement, other;
 
 //Super Function
@@ -32,15 +32,28 @@ function processFirstQuestion(){
 
     //Validate Product
     if((product == "") || (!isNaN(product))){
-        _('productError').innerHTML = "Please enter the product name and make sure that it is a number";
+        _('productError').innerHTML = "Please enter the product name";
         return false;
     }
 
     //Hide Current Question and Show Next
     _('first-question').style.display = 'none';
-    _('second-question').style.display = 'block';
+    _('product-category').style.display = 'block';
 }
 
+function processCategory(){
+    var category = _('category').value;
+
+    //Validate Product
+    if((category == "") || (!isNaN(category))){
+        _('categoryError').innerHTML = "Please enter the category";
+        return false;
+    }
+
+    //Hide Current Question and Show Next
+    _('product-category').style.display = 'none';
+    _('second-question').style.display = 'block';
+}
 function processSecondQuestion(){
     var overview = _('overview').value;
 
@@ -52,6 +65,20 @@ function processSecondQuestion(){
 
     //Hide Current Question and Show Next
     _('second-question').style.display = 'none';
+    _('target-customers').style.display = 'block';
+}
+
+function processCustomers(){
+    // var overview = _('overview').value;
+
+    // //Validate Overviewt
+    // if((overview == "") || (!isNaN(overview))){
+    //     _('overviewError').innerHTML = "Please enter the overview and make sure that it is a number";
+    //     return false;
+    // }
+
+    //Hide Current Question and Show Next
+    _('target-customers').style.display = 'none';
     _('third-question').style.display = 'block';
 }
 
@@ -66,31 +93,18 @@ function processThirdQuestion(){
 
     //Hide Current Question and Show Next
     _('third-question').style.display = 'none';
-    _('fourth-question').style.display = 'block';
-}
-
-function processFourthQuestion(){
-    var duration = _('duration').value;
-
-    //Validate Duration
-    if((duration == "") || (!isNaN(duration))){
-        _('durationError').innerHTML = "Please enter the objective and make sure that it is a number";
-        return false;
-    }
-
-    //Hide Current Question and Show Next
-    _('fourth-question').style.display = 'none';
     _('fifth-question').style.display = 'block';
 }
 
-function processFifthQuestion(){
-    var target = _('target').value;
 
-    //Validate Target
-    if((target == "") || (!isNaN(target))){
-        _('targetError').innerHTML = "Please enter the target and make sure that it is a number";
-        return false;
-    }
+function processFifthQuestion(){
+    // var target = _('target').value;
+
+    // //Validate Target
+    // if((target == "") || (!isNaN(target))){
+    //     _('targetError').innerHTML = "Please enter the target and make sure that it is a number";
+    //     return false;
+    // }
 
     //Hide Current Question and Show Next
     _('fifth-question').style.display = 'none';
@@ -98,13 +112,13 @@ function processFifthQuestion(){
 }
 
 function processSixthQuestion(){
-    var insight = _('insight').value;
+    // var insight = _('insight').value;
 
-    //Validate Insight
-    if((insight == "") || (!isNaN(insight))){
-        _('insightError').innerHTML = "Please enter the insight and make sure that it is a number";
-        return false;
-    }
+    // //Validate Insight
+    // if((insight == "") || (!isNaN(insight))){
+    //     _('insightError').innerHTML = "Please enter the insight and make sure that it is a number";
+    //     return false;
+    // }
 
     //Hide Current Question and Show Next
     _('sixth-question').style.display = 'none';
@@ -112,20 +126,20 @@ function processSixthQuestion(){
 }
 
 function processSeventhQuestion(){
-    var usp = _('usp').value;
+    // var usp = _('usp').value;
 
-    //Validate USP
-    if((usp == "") || (!isNaN(usp))){
-        _('uspError').innerHTML = "Please enter the usp and make sure that it is a number";
-        return false;
-    }
+    // //Validate USP
+    // if((usp == "") || (!isNaN(usp))){
+    //     _('uspError').innerHTML = "Please enter the usp and make sure that it is a number";
+    //     return false;
+    // }
 
     //Hide Current Question and Show Next
     _('seventh-question').style.display = 'none';
-    _('eighth-question').style.display = 'block';
+    _('eigth-question').style.display = 'block';
 }
 
-function processEighthQuestion(){
+function processEigthQuestion(){
     // var mood = _('mood').value;
 
     // //Validate USP
@@ -135,37 +149,24 @@ function processEighthQuestion(){
     // }
 
     //Hide Current Question and Show Next
-    _('eighth-question').style.display = 'none';
-    _('ninth-question').style.display = 'block';
-}
-
-function processNinthQuestion(){
-    // var usp = _('usp').value;
-
-    // //Validate USP
-    // if((usp == "") || (!isNaN(usp))){
-    //     _('uspError').innerHTML = "Please enter the usp and make sure that it is a number";
-    //     return false;
-    // }
-
-    //Hide Current Question and Show Next
-    _('ninth-question').style.display = 'none';
-    _('tenth-question').style.display = 'block';
-}
-
-function processTenthQuestion(){
-    // var usp = _('usp').value;
-
-    // //Validate USP
-    // if((usp == "") || (!isNaN(usp))){
-    //     _('uspError').innerHTML = "Please enter the usp and make sure that it is a number";
-    //     return false;
-    // }
-
-    //Hide Current Question and Show Next
-    _('tenth-question').style.display = 'none';
+    _('eigth-question').style.display = 'none';
     _('eleventh-question').style.display = 'block';
 }
+
+// function processFourthQuestion(){
+//     var duration = _('duration').value;
+
+//     //Validate Duration
+//     // if((duration == "") || (!isNaN(duration))){
+//     //     _('durationError').innerHTML = "Please enter the objective and make sure that it is a number";
+//     //     return false;
+//     // }
+
+//     //Hide Current Question and Show Next
+//     _('fourth-question').style.display = 'none';
+//     _('eleventh-question').style.display = 'block';
+// }
+
 
 function processEleventhQuestion(){
     var other = _('other').value;

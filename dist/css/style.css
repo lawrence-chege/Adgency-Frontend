@@ -17,6 +17,94 @@ body{
     font-size: 1.1rem;
 }
 
+
+#first-question{
+    background-image: url("../../img/style.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom,center;
+    min-height: 100%;
+}
+#product-category{
+    background-image: url("../../img/style.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom,center;
+    min-height: 100%;
+    display: none;
+}
+#second-question{
+    background-image: url("../../img/style.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom,center;
+    min-height: 100%;
+    display: none;
+}
+#third-question{
+    background-image: url("../../img/style.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom,center;
+    min-height: 100%;
+    display: none;
+}
+#fourth-question{
+    background-image: url("../../img/style.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom,center;
+    min-height: 100%;
+    display: none;
+}
+#target-customers{
+    background-image: url("../../img/style.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom,center;
+    min-height: 100%;
+    display: none;
+}
+#fifth-question{
+    background-image: url("../../img/style.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom,center;
+    min-height: 100%;
+    display: none;
+}
+#sixth-question{
+    background-image: url("../../img/style.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom,center;
+    min-height: 100%;
+    display: none;
+}
+#seventh-question{
+    background-image: url("../../img/style.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom,center;
+    min-height: 100%;
+    display: none;
+}
+#eigth-question{
+    background-image: url("../../img/style.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom,center;
+    min-height: 100%;
+    display: none;
+}
+#eleventh-question{
+    background-image: url("../../img/style.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom,center;
+    min-height: 100%;
+    display: none;
+}
 h1,h2,h3,h4{
     line-height: 1.3;
 }
@@ -24,6 +112,9 @@ h1,h2,h3,h4{
 a{
     text-decoration: none;
     color:var(--secondary-color);
+}
+.logo{
+    color: white;
 }
 
 ul{
@@ -78,7 +169,7 @@ img{
 /*First Section*/
 .section-a{
     position:relative;
-    background-image:url("/img/landing.jpg");
+    background-image:url("../../img/landing.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom,center;
@@ -133,13 +224,13 @@ img{
 }
 
 /*First Value*/
-.first-value{
-    background-image:url("/img/bkd.jpg");
+/* .first-value{
+    background-image:url("../../img/login.svg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom,center;
     height:400px;
-}
+} */
 
 .first-value .container{
     display:grid;
@@ -260,8 +351,8 @@ img{
     line-height: 0;
     margin-top: 1rem;
 }
-
-.email-form .form-control{
+/* .form-control */
+.email-form {
     display: inline-block;
     border: 0;
     outline: 0;
@@ -297,7 +388,7 @@ img{
 
 /*REGISTRATION PAGE*/
 .new-container{
-    background-image:url("/img/login-bkd.svg");
+    background-image:url("../../img/login-bkd.svg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom,center;
@@ -416,11 +507,11 @@ form h2{
 
 /*CLIENT DETAILS PAGE*/
 .client-container{
-    background-image:url("/img/client-details-bkd.svg");
+    background-image:url("../../img/client-details-bkd.svg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom,center;
-    width:100vw;
+    width:150vw;
     height:95vh;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -440,7 +531,15 @@ form h2{
 #tenth-question,#eleventh-question,#last-stage{
     display:none;
 }
-
+.container-md{
+    padding: 10em;
+}
+.col-md-6{
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 2em;
+    
+    
+}
 .client-form{
     background-color: #F6F7F8;
     border: 1px solid #D6D9DC;
@@ -502,6 +601,7 @@ form h2{
     cursor: pointer;
     font-size: 1.2rem;
     border-radius: 25px;
+    width:18em;
 }
 
 .btn:hover{
