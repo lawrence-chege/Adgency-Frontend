@@ -181,82 +181,87 @@
               <label for="exampleInputRationale">Rationale</label>
               <input type="text" class="form-control" id="InputRationale" placeholder="Rationale">
             </div>
-            <input type="submit" onclick="addTagline()" class="btn btn-info" value="Submit">
+            <input type="submit" onclick="addTagline()" class="btn btn-success" value="Submit">
           </form>
-          <br>
-          <div class="card" id="card">
-            <h4 class="card-header">Just do it!</h4>
-            <div class="card-body">
-              <label for="rationale">Rationale:</label>
-              <p class="card-text"
-              style="font-family: 'Source Sans Pro', sans-serif;
-              font-size: 1rem;">Because you need to do it</p>
-
-
-              <!-- Modal for Creating Concept -->
-          <div class="concept-container">
-            <div class="navigate">
-              <button id="modalBtn" class="btn-create" style="border: 1px solid red;
-              ">Write a Concept</button>
-              <div id="simpleModal" class="modal">
-                  <div class="modal-content">
-                      <div class="modal-header">
-                          <h4>Create a Concept</h4>
+        </div>
+      </div>
+      <div id="added"></div>
+      <div class="card" id="card" style="display: none;">
+        <h4 class="card-header">Just do it!</h4>
+        <div class="card-body">
+          <label for="rationale">Rationale:</label>
+          <p class="card-text"
+            style="font-family: 'Source Sans Pro', sans-serif;
+            font-size: 1rem;">Because you need to do it</p>
+        </div>
+      </div>
+      <!-- Modal for Creating Concept -->
+      <div class="concept-container">
+        <div class="navigate">
+          <button id="modalBtn" class="btn-create"
+            style="background-color: #FFC107;
+            padding: 6px 15px; border-radius: 5px;
+            margin: 0 1rem 1rem 1rem; color: black;">Write a Concept</button>
+          <div id="simpleModal" class="modal">
+                      <div class="modal-content">
+                          <div class="modal-header">
+                              <h4>Create a Concept</h4>
+                          </div>
+                          <div class="modal-body">
+                              <form id="create" class="create-concept">
+                                  <div class="form-row">
+                                      <label for="platform-name">Platform:</label>
+                                      <input id="platform-name" name="food-name" type="text">
+                                  </div>
+                                  <div class="form-row">
+                                      <label for="idea">Idea:</label>
+                                      <input id="idea" name="ingredients" type="text">
+                                  </div>
+                                  <div class="form-row upload-image" onload="myFunction()">
+                                      <label for='upload'>Image</label>
+                                      <input type="file" id="myFile" multiple size="50" onchange="myFunction()">
+                                      <p id="demo"></p>
+                                  </div>
+                                  <div class='form-row'>
+                                      <button type="submit" class="btn-submit" id="closeBtn">Submit</button>
+                                  </div>
+                              </form>
+                          </div>
                       </div>
-                      <div class="modal-body">
-                          <form id="create" class="create-concept">
-                              <div class="form-row">
-                                  <label for="platform-name">Platform:</label>
-                                  <input id="platform-name" name="food-name" type="text">
-                              </div>
-                              <div class="form-row">
-                                  <label for="idea">Idea:</label>
-                                  <input id="idea" name="ingredients" type="text">
-                              </div>
-                              <div class="form-row upload-image" onload="myFunction()">
-                                  <label for='upload'>Image</label>
-                                  <input type="file" id="myFile" multiple size="50" onchange="myFunction()">
-                                  <p id="demo"></p>
-                              </div>
-                              <div class='form-row'>
-                                  <button class="btn-submit" id="closeBtn">Submit</button>
-                              </div>
-                          </form>
-                      </div>
-                  </div>
-              </div>
-              <button type="button" class="btn btn-warning" id="conceptBtn">
-                View Concepts
-              </button>
-            </div>
           </div>
-          <div id="added"></div>
-          <div id="concept" class="card-body first" style="display: none;">
-              <div style="display: flex;
-              flex-direction: row;">
-                <img src="img/bottle.jpg" alt="bottle" width="200px" height="250px"
-                  style="margin-right: 2rem;">
-                <div class="product"
-                  style="padding: 2rem 1rem;">
-                  <h5 class="card-title"
-                    style="font-weight: bolder;
-                    font-family: 'Roboto Slab', serif;
-                    font-size: 1rem;">Platform:</h5>
-                  <p class="card-text" id="product"
-                    style="font-family: 'Source Sans Pro', sans-serif;
-                    font-size: 1rem;">Billboard</p>
-                  <h5 class="card-title"
-                    style="font-weight: bolder;
-                    font-family: 'Roboto Slab', serif;
-                    font-size: 1rem;">Idea:</h5>
-                  <p class="card-text" id="overview"
-                    style="font-family: 'Source Sans Pro', sans-serif;
-                    font-size: 1rem;">The consumer needs a fancy water bottle that they can carry around</p>
+          <button type="button" class="btn btn-danger" id="conceptBtn" style="color: white;" >
+            View Concepts
+          </button>
+        </div>
+      </div>
+      <!--DISPLAY CONCEPT-->
+      <div id="concept" class="card-body first" style="display: none;">
+              <div style="display: none;">
+                <div style="display: flex;
+                flex-direction: row;">
+                  <img src="img/bottle.jpg" alt="bottle" width="200px" height="250px"
+                    style="margin-right: 2rem;">
+                  <div class="product"
+                    style="padding: 2rem 1rem;">
+                    <h5 class="card-title"
+                      style="font-weight: bolder;
+                      font-family: 'Roboto Slab', serif;
+                      font-size: 1rem;">Platform:</h5>
+                    <p class="card-text" id="product"
+                      style="font-family: 'Source Sans Pro', sans-serif;
+                      font-size: 1rem;">Billboard</p>
+                    <h5 class="card-title"
+                      style="font-weight: bolder;
+                      font-family: 'Roboto Slab', serif;
+                      font-size: 1rem;">Idea:</h5>
+                    <p class="card-text" id="overview"
+                      style="font-family: 'Source Sans Pro', sans-serif;
+                      font-size: 1rem;">The consumer needs a fancy water bottle that they can carry around</p>
+                  </div>
                 </div>
               </div>
-          </div>
-          <div id="display-concepts"></div>
-        </div>
+              <br>
+              <div id="display-concepts"></div>
       </div>
       <footer class="main-footer">
         <strong>Copyright &copy;<a href="http://adminlte.io">Adgency</a>.</strong>
