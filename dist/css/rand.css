@@ -1,0 +1,168 @@
+.container2{
+    border: 1px solid red;
+    margin-right: 20rem;
+}
+
+/* .btn-create, .btn-view, .btn-submit{
+    border: 1px solid red;
+    margin-right:20rem;
+    padding:10px 20px;
+    color:#ee6e73;
+    font-weight:bold;
+    font-size:20px;
+    cursor:pointer
+} */
+
+.btn-create{
+    border: 1px solid red;
+    margin-right:20rem;
+    padding:10px 20px;
+    color:#ee6e73;
+    font-weight:bold;
+    font-size:20px;
+    cursor:pointer
+}
+
+.btn-create:hover, .btn-view:hover, .btn-submit:hover{
+    background-color: #ee6e73;
+    color:white;
+}
+
+.form-row {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    color:black;
+  }
+
+  .form-row input[type='text'] {
+    background-color: #FFFFFF;
+    border: 1px solid #D6D9DC;
+    border-radius: 3px;
+    width: 100%;
+    padding: 7px;
+    font-size: 14px;
+  }
+
+  .form-row label {
+    margin-bottom: 15px;
+    color: #ee6e73;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+
+  .create-concept{
+    margin-top: 20px;
+    border: 1px solid #ee6e73;
+    padding:10px 10px;
+    position: relative;
+    overflow: hidden;
+    /* background-image: url("images/bkgd.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; */
+    height:100%;
+  }
+
+  .create-concept:before{
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.4;
+    background-image: url("images/pancakes.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .form-row textarea {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+
+    background-color:white;
+
+    border: 1px solid #D6D9DC;
+    border-radius: 3px;
+
+    min-height: 200px;
+    margin-bottom: 10px;
+    width:70%;
+    padding: 7px;
+    resize: none;
+  }
+
+  .form-row .instructions {
+    color: #ee6e73;
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+
+  .modal{
+    display:none;
+    position:absolute;
+    z-index:1;
+    left:0;
+    top:0;
+    min-height:100%;
+    width:80%;
+    overflow:auto;
+    background-color:rgba(0,0,0,0.1);
+  }
+
+  .modal-content{
+    background-color:paleturquoise;
+    margin:0 auto;
+    padding:20px;
+    width:100%;
+    min-height:100%;
+    box-shadow:0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0,0,0,0.17);
+    animation-name: modalopen;
+    animation-duration:1s;
+    overflow: auto;
+  }
+
+  .closeBtn{
+    color:#111111;
+    float:right;
+    font-size:30px;
+  }
+
+  .closeBtn:hover, .closeBtn:focus{
+    cursor:pointer;
+    color:white;
+    text-decoration:none;
+  }
+
+  .concept-block{
+    width:100%;
+    border:1px solid #ee6e73;
+    margin-top:10px;
+    display:none;
+  }
+
+  .new-concept{
+    display:flex;
+    justify-content: space-between;
+    margin:0 auto;
+    width:100%;
+  }
+
+  .concept-content{
+    width:100%
+  }
+
+  ul.my-concepts{
+    display: block;
+  }
+
+  @keyframes modalopen{
+    from{opacity:0}
+    to{opacity:1}
+  }
