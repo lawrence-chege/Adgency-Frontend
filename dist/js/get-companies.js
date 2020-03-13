@@ -92,7 +92,7 @@ const getCompanies = () => {
                 a.classList.add("nav-link");
                 a.classList.add("active");
                 let att = document.createAttribute("href");
-                att.value = "#concept";
+                att.value = "#"+company_name;
                 a.setAttributeNode(att);
                 comp.appendChild(a);
                 let i1 = document.createElement('i')
@@ -112,6 +112,127 @@ const getCompanies = () => {
                 p.appendChild(i2)
                 company_id = company["id"]
                 projects = company["projects"]
+                //create company ul
+                let company_items = document.createElement('ul')
+                company_items.classList.add("nav")
+                company_items.classList.add("nav-treeview")
+                comp.appendChild(company_items)
+                // create concept link
+                //@TODO add href
+                let concept_nav = document.createElement('li')
+                concept_nav.classList.add("nav-item")
+                company_items.appendChild(concept_nav)
+                let concept_nav_link = document.createElement('a')
+                concept_nav_link.classList.add("nav-link")
+                concept_nav_link.classList.add("active")
+                concept_nav.appendChild(concept_nav_link)
+                let i3 = document.createElement('i')
+                i3.classList.add("fa")
+                i3.classList.add("fa-info-circle")
+                i3.classList.add("nav-icon")
+                concept_nav_link.appendChild(i3)
+                let p_concept = document.createElement("p")
+                p_concept.innerHTML += "Concept"
+                concept_nav_link.appendChild(p_concept)
+
+                // create Budget link
+                let budget_nav = document.createElement('li')
+                budget_nav.classList.add("nav-item")
+                company_items.appendChild(budget_nav)
+                let budget_nav_link = document.createElement('a')
+                budget_nav_link.classList.add("nav-link")
+                budget_nav.appendChild(budget_nav_link)
+                let i4 = document.createElement('i')
+                i4.classList.add("fa")
+                i4.classList.add("fa-money")
+                i4.classList.add("nav-icon")
+                budget_nav_link.appendChild(i4)
+                let p_budget = document.createElement("p")
+                p_budget.innerHTML += "Budget"
+                budget_nav_link.appendChild(p_budget)
+
+                // create Contract link
+                let contract_nav = document.createElement('li')
+                contract_nav.classList.add("nav-item")
+                company_items.appendChild(contract_nav)
+                let contract_nav_link = document.createElement('a')
+                contract_nav_link.classList.add("nav-link")
+                contract_nav.appendChild(contract_nav_link)
+                let i5 = document.createElement('i')
+                i5.classList.add("fa")
+                i5.classList.add("fa-thumbs-up")
+                i5.classList.add("nav-icon")
+                contract_nav_link.appendChild(i5)
+                let p_contract = document.createElement("p")
+                p_contract.innerHTML += "Contract"
+                contract_nav_link.appendChild(p_contract)
+
+                // create Ideation link
+                let ideation_nav = document.createElement('li')
+                ideation_nav.classList.add("nav-item")
+                company_items.appendChild(ideation_nav)
+                let ideation_nav_link = document.createElement('a')
+                ideation_nav_link.classList.add("nav-link")
+                ideation_nav.appendChild(ideation_nav_link)
+                let i6 = document.createElement('i')
+                i6.classList.add("fa")
+                i6.classList.add("fa-lightbulb-o")
+                i6.classList.add("nav-icon")
+                ideation_nav_link.appendChild(i6)
+                let p_ideation = document.createElement("p")
+                p_ideation.innerHTML += "Ideation"
+                ideation_nav_link.appendChild(p_ideation)
+
+                 // create Design link
+                 let design_nav = document.createElement('li')
+                 design_nav.classList.add("nav-item")
+                 company_items.appendChild(design_nav)
+                 let design_nav_link = document.createElement('a')
+                 design_nav_link.classList.add("nav-link")
+                 design_nav.appendChild(design_nav_link)
+                 let i7 = document.createElement('i')
+                 i7.classList.add("fa")
+                 i7.classList.add("fa-circle")
+                 i7.classList.add("nav-icon")
+                 design_nav_link.appendChild(i7)
+                 let p_design = document.createElement("p")
+                 p_design.innerHTML += "Design"
+                 design_nav_link.appendChild(p_design)
+
+
+                 // create Personell link
+                 let personel_nav = document.createElement('li')
+                 personel_nav.classList.add("nav-item")
+                 company_items.appendChild(personel_nav)
+                 let personel_nav_link = document.createElement('a')
+                 personel_nav_link.classList.add("nav-link")
+                 personel_nav.appendChild(personel_nav_link)
+                 let i8 = document.createElement('i')
+                 i8.classList.add("fa")
+                 i8.classList.add("fa-users")
+                 i8.classList.add("nav-icon")
+                 personel_nav_link.appendChild(i8)
+                 let p_personel = document.createElement("p")
+                 p_personel.innerHTML += "Personel"
+                 personel_nav_link.appendChild(p_personel)
+
+                 // create Personell link
+                 let final_nav = document.createElement('li')
+                 final_nav.classList.add("nav-item")
+                 company_items.appendChild(final_nav)
+                 let final_nav_link = document.createElement('a')
+                 final_nav_link.classList.add("nav-link")
+                 final_nav.appendChild(final_nav_link)
+                 let i9 = document.createElement('i')
+                 i9.classList.add("fa")
+                 i9.classList.add("fa-users")
+                 i9.classList.add("nav-icon")
+                 final_nav_link.appendChild(i9)
+                 let p_final = document.createElement("p")
+                 p_final.innerHTML += "Final Output"
+                 final_nav_link.appendChild(p_final)
+
+
                 if (projects.length > 0) {
                     projects.forEach(project => {
                         project_company = project["company_id"]
