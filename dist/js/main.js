@@ -287,15 +287,4 @@ function addConcept(e){
                                 '</div>'+
                                 '</div>'+
                                 '<br>'
-
-    // document.getElementById('concepts').innerHTML += '<li class="new-concept">'+
-                           '<div class="new-image" style="margin-right: 10px;">'+
-                           '<img class="image" src="images/burrito.jpg"  width="400px" height="300px">'+
-                           '</div>'+
-                           '<div class="concept-content">'+
-                           '<h6 class="title" style="border-bottom: 2px solid #111111;">'+newFood+'</h6>'+
-                           '<p class="ingredients" style="font-style: italic; font-weight: bold;">'+newIngredients+'</p>'+
-                           '<p class="method">'+newMethod+'</p>'+
-                           ' </div>'+
-                           '</li>'
 }
