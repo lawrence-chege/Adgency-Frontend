@@ -177,3 +177,129 @@ function processEleventhQuestion(){
         return false;
     }
 }
+
+//IDEATION PAGE
+//ADDING TAGLINES
+var form = document.getElementById('addForm');
+var card = document.getElementById('card');
+var newTagline = document.getElementById('InputTagline').value;
+var newRationale = document.getElementById('InputRationale').value;
+
+form.addEventListener('submit', addTagline);
+
+
+//Function to add item to the list
+function addTagline(){
+    var newTagline = document.getElementById('InputTagline').value;
+    var newRationale = document.getElementById('InputRationale').value;
+
+    document.getElementById('added').innerHTML += '<div class="card" id="card">'+
+                        '<h4 class="card-header">' +newTagline+ '</h4>'+
+                        '<div class="card-body">'+
+                        '<label for="rationale">Rationale:</label>'+
+                        '<p class="card-text"'+
+                        'style="font-family: "Source Sans Pro", sans-serif;'+
+                        'font-size: 1rem;">'+newRationale+'</p>'+
+                        '<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">'+
+                        'Write a Concept'+
+                        '</button>'+
+                        '</div>'+
+                        '</div>'
+}
+
+//Get Modal Element
+var modal = document.getElementById('simpleModal');
+//Get open Modal Button
+var modalBtn = document.getElementById('modalBtn');
+//Get Close Button
+var closeBtn = document.getElementById('closeBtn');
+
+//Listen for Open Click
+modalBtn.addEventListener('click',openModal);
+
+//Listen for Close Click
+closeBtn.addEventListener('click',closeModal);
+
+//Function to open Modal
+function openModal(){
+    modal.style.display = 'block';
+}
+
+//Function to Close Modal
+function closeModal(){
+    modal.style.display = 'none';
+}
+
+//TO DISPLAY THE CONCEPTS
+
+
+//Get Concept Element
+var concept = document.getElementById('concept');
+//Get open Concept Button
+var conceptBtn = document.getElementById('conceptBtn');
+
+//Listen for Open Click
+conceptBtn.addEventListener('click',openConcept);
+
+//Function to open Concept
+function openConcept(){
+    concept.style.display = 'block';
+}
+
+//TO COLLECT THE DATA ADDED TO THE FORM
+var ideaForm = document.getElementById('create');
+
+ideaForm.addEventListener('submit', addConcept);
+
+function addConcept(e){
+    e.preventDefault();
+
+    //Get Input Values
+    var newPlatform = document.getElementById('platform-name').value;
+    var newIdea = document.getElementById('idea');
+    var newImage = document.getElementById('file').value;
+
+    alert('newPlatform');
+
+    // var image = document.createElement('img');
+    // var source = document.createAttribute('src');
+
+    // source.value = newImage;
+    // image.setAttribute(source);
+
+
+    // //Get Concept List
+    // document.getElementById('display-concepts').innerHTML += '<div style="display: flex;'+
+    //                             'flex-direction: row;">'+
+    //                             '<img src="img/bottle.jpg" alt="bottle" width="200px" height="250px"'+
+    //                             'style="margin-right: 2rem;">'+
+    //                             '<div class="product"'+
+    //                             'style="padding: 2rem 1rem;">'+
+    //                             '<h5 class="card-title"'+
+    //                             'style="font-weight: bolder;'+
+    //                             'font-family: "Roboto Slab, serif;"'+
+                                'font-size: 1rem;">Platform:</h5>'+
+                                '<p class="card-text" id="product"'+
+                                'style="font-family: "Source Sans Pro, sans-serif;"'+
+                                'font-size: 1rem;">' +newPlatform+ '</p>'+
+                                '<h5 class="card-title"'+
+                                'style="font-weight: bolder;'+
+                                'font-family: "Roboto Slab, serif;"'+
+                                'font-size: 1rem;">Idea:</h5>'+
+                                '<p class="card-text" id="overview"'+
+                                'style="font-family: "Source Sans Pro, sans-serif;"'+
+                                'font-size: 1rem;">' +newIdea+ '</p>'+
+                                '</div>'+
+                                '</div>'
+
+    // document.getElementById('concepts').innerHTML += '<li class="new-concept">'+
+                           '<div class="new-image" style="margin-right: 10px;">'+
+                           '<img class="image" src="images/burrito.jpg"  width="400px" height="300px">'+
+                           '</div>'+
+                           '<div class="concept-content">'+
+                           '<h6 class="title" style="border-bottom: 2px solid #111111;">'+newFood+'</h6>'+
+                           '<p class="ingredients" style="font-style: italic; font-weight: bold;">'+newIngredients+'</p>'+
+                           '<p class="method">'+newMethod+'</p>'+
+                           ' </div>'+
+                           '</li>'
+}
