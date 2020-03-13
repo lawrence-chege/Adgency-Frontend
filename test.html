@@ -1,59 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Ideation Space</title>
+  <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-
-  <title>AdminLTE 3 | Dashboard 3</title>
-
-  <!-- Font Awesome Icons -->
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
-  <!-- IonIcons -->
-  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Tempusdominus Bbootstrap 4 -->
+  <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="dist/css/extra.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+  <!-- summernote -->
+  <link rel="stylesheet" href="plugins/summernote/summernote-bs4.css">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Source+Sans+Pro&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/78fb37d7fa.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
-<!--
-BODY TAG OPTIONS:
-=================
-Apply one or more of the following classes to to the body tag
-to get the desired effect
-|---------------------------------------------------------|
-|LAYOUT OPTIONS | sidebar-collapse                        |
-|               | sidebar-mini                            |
-|---------------------------------------------------------|
--->
-<body class="hold-transition sidebar-mini">
+<body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
-      <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-    <!-- Left navbar links -->
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Home</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contact</a>
-      </li>
-    </ul>
 
-    <!-- SEARCH FORM -->
-    <form class="form-inline ml-3">
-      <div class="input-group input-group-sm">
-        <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
-        <div class="input-group-append">
-          <button class="btn btn-navbar" type="submit">
-            <i class="fas fa-search"></i>
-          </button>
-        </div>
-      </div>
-    </form>
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+
   </nav>
   <!-- /.navbar -->
 
@@ -72,8 +55,18 @@ to get the desired effect
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-          <li class="nav-item has-treeview menu-open">
-            <a href="#" class="nav-link active">
+               <li class="nav-item has-treeview menu-open">
+                <a href="dashboard.html" class="nav-link active">
+                  <i class="nav-icon fas fa-tachometer-alt"></i>
+                  <p>
+                    Dashboard
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+              </li>
+
+        <li class="nav-item has-treeview menu-open">
+            <a href="concept.html" class="nav-link active">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Company A
@@ -82,43 +75,43 @@ to get the desired effect
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="./index.html" class="nav-link active">
+                <a href="concept.html" class="nav-link active">
                   <i class="fa fa-info-circle nav-icon"></i>
                   <p>Concept</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./index2.html" class="nav-link">
+                <a href="quote.html" class="nav-link">
                   <i class="fa fa-money nav-icon"></i>
                   <p>Quote</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./index3.html" class="nav-link">
+                <a href="contract.html" class="nav-link">
                   <i class="fa fa-thumbs-up nav-icon"></i>
                   <p>Contract</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./index3.html" class="nav-link">
+                <a href="#" class="nav-link">
                   <i class="fa fa-lightbulb-o nav-icon"></i>
                   <p>Ideation</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./index3.html" class="nav-link">
+                <a href="design.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Design</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./index3.html" class="nav-link">
+                <a href="personel.html" class="nav-link">
                   <i class="fa fa-users nav-icon"></i>
                   <p>Personel</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./index3.html" class="nav-link">
+                <a href="final.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Final Output</p>
                 </a>
@@ -137,50 +130,6 @@ to get the desired effect
                   <i class="right fas fa-angle-left"></i>
                 </p>
               </a>
-              <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="./index.html" class="nav-link active">
-                    <i class="fa fa-info-circle nav-icon"></i>
-                    <p>Concept</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="./index2.html" class="nav-link">
-                    <i class="fa fa-money nav-icon"></i>
-                    <p>Quote</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="./index3.html" class="nav-link">
-                    <i class="fa fa-thumbs-up nav-icon"></i>
-                    <p>Contract</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="./index3.html" class="nav-link">
-                    <i class="fa fa-lightbulb-o nav-icon"></i>
-                    <p>Ideation</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="./index3.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Design</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="./index3.html" class="nav-link">
-                    <i class="fa fa-users nav-icon"></i>
-                    <p>Personel</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="./index3.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Final Output</p>
-                  </a>
-                </li>
-              </ul>
             </li>
             <!--Company C-->
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
@@ -194,99 +143,225 @@ to get the desired effect
                       <i class="right fas fa-angle-left"></i>
                     </p>
                   </a>
-                  <ul class="nav nav-treeview">
-                    <li class="nav-item">
-                      <a href="./index.html" class="nav-link active">
-                        <i class="fa fa-info-circle nav-icon"></i>
-                        <p>Concept</p>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="./index2.html" class="nav-link">
-                        <i class="fa fa-money nav-icon"></i>
-                        <p>Quote</p>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="./index3.html" class="nav-link">
-                        <i class="fa fa-thumbs-up nav-icon"></i>
-                        <p>Contract</p>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="./index3.html" class="nav-link">
-                        <i class="fa fa-lightbulb-o nav-icon"></i>
-                        <p>Ideation</p>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="./index3.html" class="nav-link">
-                        <i class="far fa-circle nav-icon"></i>
-                        <p>Design</p>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="./index3.html" class="nav-link">
-                        <i class="fa fa-users nav-icon"></i>
-                        <p>Personel</p>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="./index3.html" class="nav-link">
-                        <i class="far fa-circle nav-icon"></i>
-                        <p>Final Output</p>
-                      </a>
-                    </li>
-                  </ul>
                 </li>
-        </ul>
-      </nav>
-    </div>
-  </aside>
+              </ul>
+            </nav>
+          </div>
+        </aside>
+
   <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
+  <div class="content-wrapper" id="content">
     <!-- Content Header (Page header) -->
     <div class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Company A: Concept</h1>
+
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Company A</li>
+              <li class="breadcrumb-item active">Ideation</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>
     <!-- Main content -->
+    <div class="container">
+      <div class="tagline">
+        <div id="main" class="card card-body">
+          <h4 class="title">Submit a Tagline</h4>
+          <form id="addForm">
+            <div class="form-group">
+              <label for="exampleInputTagline">Tagline</label>
+              <input type="text" class="form-control" id="InputTagline" placeholder="Tagline">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputRationale">Rationale</label>
+              <input type="text" class="form-control" id="InputRationale" placeholder="Rationale">
+            </div>
+            <input type="submit" onclick="addTagline()" class="btn btn-info" value="Submit">
+          </form>
+          <br>
+          <div class="card" id="card">
+            <h4 class="card-header">Just do it!</h4>
+            <div class="card-body">
+              <label for="rationale">Rationale:</label>
+              <p class="card-text"
+              style="font-family: 'Source Sans Pro', sans-serif;
+              font-size: 1rem;">Because you need to do it</p>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                Write a Concept
+              </button>
+              <button type="button" class="btn btn-warning" id="conceptBtn">
+                View Concepts
+              </button>
+            </div>
+          </div>
+          <div id="added"></div>
+          <div id="concept" class="card-body first"
+              style="display: none;">
+              <div style="display: flex;
+              flex-direction: row;">
+                <img src="img/bottle.jpg" alt="bottle" width="200px" height="250px"
+                  style="margin-right: 2rem;">
+                <div class="product"
+                  style="padding: 2rem 1rem;">
+                  <h5 class="card-title"
+                    style="font-weight: bolder;
+                    font-family: 'Roboto Slab', serif;
+                    font-size: 1rem;">Platform:</h5>
+                  <p class="card-text" id="product"
+                    style="font-family: 'Source Sans Pro', sans-serif;
+                    font-size: 1rem;">Billboard</p>
+                  <h5 class="card-title"
+                    style="font-weight: bolder;
+                    font-family: 'Roboto Slab', serif;
+                    font-size: 1rem;">Idea:</h5>
+                  <p class="card-text" id="overview"
+                    style="font-family: 'Source Sans Pro', sans-serif;
+                    font-size: 1rem;">The consumer needs a fancy water bottle that they can carry around</p>
+                </div>
+              </div>
+          </div>
+          <div id="display-concepts"></div>
+        </div>
+      </div>
+      <!-- Modal for Creating Concept -->
 
 
-
-
-
-
-  <!-- Main Footer -->
-  <footer class="main-footer">
-    <strong>Copyright &copy;<a href="http://adminlte.io">Adgency</a>.</strong>
-    All rights reserved.
-  </footer>
-</div>
-
-<!-- REQUIRED SCRIPTS -->
+      <div class="concept-container">
+        <div class="navigate">
+          <button id="modalBtn" class="btn-create" style="border: 1px solid red;
+          ">Write a Concept</button>
+          <div id="simpleModal" class="modal">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <span id="closeBtn" class="closeBtn">&times;</span>
+                      <h4>Create a Concept</h4>
+                  </div>
+                  <div class="modal-body">
+                      <form id="create" class="create-concept">
+                          <div class="form-row">
+                              <label for="food-name">Platform:</label>
+                              <input id="food-name" name="food-name" type="text">
+                          </div>
+                          <div class="form-row">
+                              <label for="ingredients">Idea:</label>
+                              <input id="ingredients" name="ingredients" type="text">
+                          </div>
+                          <div class="form-row upload-image" onload="myFunction()">
+                              <label for='upload'>Image</label>
+                              <input type="file" id="myFile" multiple size="50" onchange="myFunction()">
+                              <p id="demo"></p>
+                          </div>
+                          <div class='form-row'>
+                              <button class="btn-submit">Submit</button>
+                          </div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      <div class="modal" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Create a Concept</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form id="ideation" action="ideation.html" method="POST">
+                <div class="form-group">
+                  <label for="platform">Platform</label>
+                  <select class="form-control" id="platform">
+                    <option>Billboard</option>
+                    <option>TV Script</option>
+                    <option>Radio Script</option>
+                    <option>Print</option>
+                    <option>Social Media Post</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="idea">Idea</label>
+                  <textarea class="form-control" id="idea" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="file">Upload File</label>
+                  <input type="file" class=" file-path validate" id="file">
+                </div>
+                <button type="submit" id="modalBtn" class="btn btn-primary float-right">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="main-footer">
+        <strong>Copyright &copy;<a href="http://adminlte.io">Adgency</a>.</strong>
+        All rights reserved.
+      </footer>
+      <!-- Control Sidebar -->
+      <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+      </aside>
+      <!-- /.control-sidebar -->
+    </div>
+<!-- ./wrapper -->
 
 <!-- jQuery -->
-<script src="plugins/jquery/jquery.min.js"></script>
-<!-- Bootstrap -->
-<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- AdminLTE -->
-<script src="dist/js/adminlte.js"></script>
-
-<!-- OPTIONAL SCRIPTS -->
-<script src="plugins/chart.js/Chart.min.js"></script>
-<script src="dist/js/demo.js"></script>
-<script src="dist/js/pages/dashboard3.js"></script>
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <!-- jQuery UI 1.11.4 -->
+  <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+  <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+  <script>
+    $.widget.bridge('uibutton', $.ui.button)
+  </script>
+  <!-- Bootstrap 4 -->
+  <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- ChartJS -->
+  <script src="plugins/chart.js/Chart.min.js"></script>
+  <!-- Sparkline -->
+  <script src="plugins/sparklines/sparkline.js"></script>
+  <!-- JQVMap -->
+  <script src="plugins/jqvmap/jquery.vmap.min.js"></script>
+  <script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+  <!-- jQuery Knob Chart -->
+  <script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+  <!-- daterangepicker -->
+  <script src="plugins/moment/moment.min.js"></script>
+  <script src="plugins/daterangepicker/daterangepicker.js"></script>
+  <!-- Tempusdominus Bootstrap 4 -->
+  <script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+  <!-- Summernote -->
+  <script src="plugins/summernote/summernote-bs4.min.js"></script>
+  <!-- overlayScrollbars -->
+  <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+  <!-- AdminLTE App -->
+  <script src="dist/js/adminlte.js"></script>
+  <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+  <script src="dist/js/pages/dashboard.js"></script>
+  <!-- AdminLTE for demo purposes -->
+  <script src="dist/js/demo.js"></script>
+  <script src="dist/js/main.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script>
+    $(function(){
+       $('modalBtn').on('submit', function(e){
+            e.preventDefault();
+            $.ajax({
+                url: "ideation.html",
+                type: "POST",
+                data: $("modalBtn").serialize(),
+                success: function(data){
+                    alert("Successfully submitted.")
+                }
+            });
+       });
+    });
+  </script>
 </body>
 </html>
