@@ -182,15 +182,14 @@ function processEleventhQuestion(){
 //ADDING TAGLINES
 var form = document.getElementById('addForm');
 var card = document.getElementById('card');
-var newTagline = document.getElementById('InputTagline');
-var newRationale = document.getElementById('InputRationale');
+var newTagline = document.getElementById('InputTagline').value;
+var newRationale = document.getElementById('InputRationale').value;
 
 form.addEventListener('submit', addTagline);
 
 
 //Function to add item to the list
-function addTagline(e){
-    e.preventDefault();
+function addTagline(){
     var newTagline = document.getElementById('InputTagline').value;
     var newRationale = document.getElementById('InputRationale').value;
 
@@ -201,10 +200,13 @@ function addTagline(e){
                         '<p class="card-text"'+
                         'style="font-family: "Source Sans Pro", sans-serif;'+
                         'font-size: 1rem;">'+newRationale+'</p>'+
+                        '<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">'+
+                        'Write a Concept'+
+                        '</button>'+
                         '</div>'+
-                        '</div>'+
-                        '<br>'
+                        '</div>'
 }
+
 //Get Modal Element
 var modal = document.getElementById('simpleModal');
 //Get open Modal Button
@@ -254,7 +256,10 @@ function addConcept(e){
 
     //Get Input Values
     var newPlatform = document.getElementById('platform-name').value;
-    var newIdea = document.getElementById('idea').value;
+    var newIdea = document.getElementById('idea');
+    var newImage = document.getElementById('file').value;
+
+    alert('newPlatform');
 
     // var image = document.createElement('img');
     // var source = document.createAttribute('src');
@@ -263,16 +268,16 @@ function addConcept(e){
     // image.setAttribute(source);
 
 
-    //Get Concept List
-    document.getElementById('display-concepts').innerHTML += '<div style="display: flex;'+
-                                'flex-direction: row;">'+
-                                '<img src="img/bottle.jpg" alt="bottle" width="200px" height="250px"'+
-                                'style="margin-right: 2rem;">'+
-                                '<div class="product"'+
-                                'style="padding: 2rem 1rem;">'+
-                                '<h5 class="card-title"'+
-                                'style="font-weight: bolder;'+
-                                'font-family: "Roboto Slab, serif;"'+
+    // //Get Concept List
+    // document.getElementById('display-concepts').innerHTML += '<div style="display: flex;'+
+    //                             'flex-direction: row;">'+
+    //                             '<img src="img/bottle.jpg" alt="bottle" width="200px" height="250px"'+
+    //                             'style="margin-right: 2rem;">'+
+    //                             '<div class="product"'+
+    //                             'style="padding: 2rem 1rem;">'+
+    //                             '<h5 class="card-title"'+
+    //                             'style="font-weight: bolder;'+
+    //                             'font-family: "Roboto Slab, serif;"'+
                                 'font-size: 1rem;">Platform:</h5>'+
                                 '<p class="card-text" id="product"'+
                                 'style="font-family: "Source Sans Pro, sans-serif;"'+
@@ -285,8 +290,7 @@ function addConcept(e){
                                 'style="font-family: "Source Sans Pro, sans-serif;"'+
                                 'font-size: 1rem;">' +newIdea+ '</p>'+
                                 '</div>'+
-                                '</div>'+
-                                '<br>'
+                                '</div>'
 
     // document.getElementById('concepts').innerHTML += '<li class="new-concept">'+
                            '<div class="new-image" style="margin-right: 10px;">'+
