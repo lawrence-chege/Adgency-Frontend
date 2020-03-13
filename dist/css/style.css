@@ -19,14 +19,14 @@ body{
 
 
 #first-question{
-    background-image: url("../../img/product.jpg");
+    background-image: url("../../img/style.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom,center;
     min-height: 100%;
 }
 #product-category{
-    background-image: url("../../img/product.jpg");
+    background-image: url("../../img/style.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom,center;
@@ -34,7 +34,7 @@ body{
     display: none;
 }
 #second-question{
-    background-image: url("../../img/objective.jpg");
+    background-image: url("../../img/style.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom,center;
@@ -42,7 +42,7 @@ body{
     display: none;
 }
 #third-question{
-    background-image: url("../../img/objective.jpg");
+    background-image: url("../../img/style.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom,center;
@@ -50,7 +50,7 @@ body{
     display: none;
 }
 #fourth-question{
-    background-image: url("../../img/duration.jpg");
+    background-image: url("../../img/style.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom,center;
@@ -58,7 +58,7 @@ body{
     display: none;
 }
 #target-customers{
-    background-image: url("../../img/people.jpeg");
+    background-image: url("../../img/style.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom,center;
@@ -66,7 +66,7 @@ body{
     display: none;
 }
 #fifth-question{
-    background-image: url("../../img/usp.jpg");
+    background-image: url("../../img/style.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom,center;
@@ -224,13 +224,13 @@ img{
 }
 
 /*First Value*/
-.first-value{
+/* .first-value{
     background-image:url("../../img/login.svg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom,center;
     height:400px;
-}
+} */
 
 .first-value .container{
     display:grid;
