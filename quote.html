@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 3 | Dashboard</title>
+  <title>Ideation Space</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="dist/css/extra.css">
   <!-- overlayScrollbars -->
   <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
   <!-- Daterange picker -->
@@ -26,9 +27,11 @@
   <link rel="stylesheet" href="plugins/summernote/summernote-bs4.css">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Source+Sans+Pro&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/78fb37d7fa.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
-<body class="hold-transition sidebar-mini layout-fixed" onload="getCompanies()">
+<body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
 
   <!-- Navbar -->
@@ -49,87 +52,262 @@
     <!-- Sidebar -->
       <!-- Sidebar Menu -->
       <nav class="mt-2">
-        <ul id="play" class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
-        </ul>
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <li class="nav-item has-treeview menu-open">
+            <a href="#" class="nav-link active">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>Dashboard
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+          </li>
+          <li class="nav-item has-treeview menu-open">
+            <a href="#" class="nav-link active">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p> Origin 8
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="concept.html" class="nav-link ">
+                  <i class="fa fa-info-circle nav-icon"></i>
+                  <p>Concept</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="quote.html" class="nav-link active">
+                  <i class="fa fa-money nav-icon"></i>
+                  <p>Quote</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="contract.html" class="nav-link">
+                  <i class="fa fa-thumbs-up nav-icon"></i>
+                  <p>Contract</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="ideation.html" class="nav-link">
+                  <i class="fa fa-lightbulb-o nav-icon"></i>
+                  <p>Ideation</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="design.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Design</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="personel.html" class="nav-link">
+                  <i class="fa fa-users nav-icon"></i>
+                  <p>Personel</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="final.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Final Output</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!--Company B-->
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <li class="nav-item has-treeview menu-open">
+              <a href="#" class="nav-link active">
+                <i class="nav-icon fas fa-tachometer-alt"></i>
+                <p>Company B
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+            </li>
+            <!--Company C-->
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+              <li class="nav-item has-treeview menu-open">
+                <a href="#" class="nav-link active">
+                  <i class="nav-icon fas fa-tachometer-alt"></i>
+                  <p>Company C
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+              </li>
+            </ul>
       </nav>
-    </div>
-  </aside>
+          </div>
+        </aside>
 
   <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
+  <div class="content-wrapper" id="content">
     <!-- Content Header (Page header) -->
     <div class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Dashboard</h1>
+
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Dashboard</li>
+              <li class="breadcrumb-item active">Ideation</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>
-    <!-- /.content-header -->
-
     <!-- Main content -->
-    <div id="main-content">
+    <div class="container">
+      <div class="tagline">
+        <div id="main" class="card card-body">
+          <h4 class="title">Submit a Budeget Item</h4>
+          <form id="addForm">
+            <div class="form-group">
+              <label for="exampleInputTagline">Item</label>
+              <input type="text" class="form-control" id="InputTagline" placeholder="Item">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputRationale">Description</label>
+              <input type="text" class="form-control" id="InputRationale" placeholder="Description">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputTagline">Amount</label>
+              <input type="text" class="form-control" id="InputTagline" placeholder="Amount">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputRationale">Duration</label>
+              <input type="text" class="form-control" id="InputRationale" placeholder="Duration">
+            </div>
+            <input type="submit" onclick="addTagline()" class="btn btn-success" value="Submit">
+          </form>
+        </div>
+      </div>
+      <div id="added"></div>
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Budget Item</th>
+          <th scope="col">Description</th>
+          <th scope="col">Amount</th>
+          <th scope="col">Duration</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Ideation</td>
+          <td>Generation of taglines and ad vision</td>
+          <td>$500</td>
+          <td>5 days</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Content Creation</td>
+          <td>Creating content for the various Ideas</td>
+          <td>$1000</td>
+          <td> 1 week</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Design and scripting</td>
+          <td>Creation of visual designs or scripts for Tv or Radio</td>
+          <td>$1500</td>
+          <td>10 Days</td>
+        </tr>
+        <tr>
+          <th scope="row">4</th>
+          <td>Production</td>
+          <td>Implementation on the agreed design or scripts</td>
+          <td>$1000</td>
+          <td>1 Month</td>
+        </tr>
+        <tr>          
+        </tbody>
+      </table><br>
+      <div>
+          <button type="button" class="btn btn-success float">Accept</button>&nbsp;&nbsp;
+            <button type="button" class="btn btn-danger float-right">Reject</button><hr>
+
+      </div>
       
+
+    <div class="container">
+        <form>
+  
+            <div class="form-group">
+              <label for="exampleFormControlSelect1">Select Budget Item</label>
+              <select class="form-control" id="exampleFormControlSelect1">
+                  <option selected>Choose budget Item</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+              </select>
+            </div>
+            <div class="form-group">
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">Concern or comment</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-info">Submit</button>
+          </form>
+
     </div>
 
- 
-  <footer class="main-footer">
-    <strong>Copyright &copy;<a href="http://adminlte.io">Adgency</a>.</strong>
-    All rights reserved.
-  </footer>
-
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-    <!-- Control sidebar content goes here -->
-  </aside>
-  <!-- /.control-sidebar -->
-</div>
+      <!-- Modal for Creating Concept -->
+      
+      <!--DISPLAY CONCEPT-->
+     
+      <footer class="main-footer">
+        <strong>Copyright &copy;<a href="http://adminlte.io">Adgency</a>.</strong>
+        All rights reserved.
+      </footer>
+      <!-- Control Sidebar -->
+      <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+      </aside>
+      <!-- /.control-sidebar -->
+    </div>
 <!-- ./wrapper -->
 
 <!-- jQuery -->
-<script src="plugins/jquery/jquery.min.js"></script>
-<!-- jQuery UI 1.11.4 -->
-<script src="plugins/jquery-ui/jquery-ui.min.js"></script>
-<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-<script>
-  $.widget.bridge('uibutton', $.ui.button)
-</script>
-<!-- Bootstrap 4 -->
-<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- ChartJS -->
-<script src="plugins/chart.js/Chart.min.js"></script>
-<!-- Sparkline -->
-<script src="plugins/sparklines/sparkline.js"></script>
-<!-- JQVMap -->
-<script src="plugins/jqvmap/jquery.vmap.min.js"></script>
-<script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
-<!-- jQuery Knob Chart -->
-<script src="plugins/jquery-knob/jquery.knob.min.js"></script>
-<!-- daterangepicker -->
-<script src="plugins/moment/moment.min.js"></script>
-<script src="plugins/daterangepicker/daterangepicker.js"></script>
-<!-- Tempusdominus Bootstrap 4 -->
-<script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
-<!-- Summernote -->
-<script src="plugins/summernote/summernote-bs4.min.js"></script>
-<!-- overlayScrollbars -->
-<script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-<!-- AdminLTE App -->
-<script src="dist/js/adminlte.js"></script>
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="dist/js/pages/dashboard.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="dist/js/demo.js"></script>
-<script src="dist/js/get-companies.js"></script>
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <!-- jQuery UI 1.11.4 -->
+  <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+  <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+  <script>
+    $.widget.bridge('uibutton', $.ui.button)
+  </script>
+  <!-- Bootstrap 4 -->
+  <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- ChartJS -->
+  <script src="plugins/chart.js/Chart.min.js"></script>
+  <!-- Sparkline -->
+  <script src="plugins/sparklines/sparkline.js"></script>
+  <!-- JQVMap -->
+  <script src="plugins/jqvmap/jquery.vmap.min.js"></script>
+  <script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+  <!-- jQuery Knob Chart -->
+  <script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+  <!-- daterangepicker -->
+  <script src="plugins/moment/moment.min.js"></script>
+  <script src="plugins/daterangepicker/daterangepicker.js"></script>
+  <!-- Tempusdominus Bootstrap 4 -->
+  <script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+  <!-- Summernote -->
+  <script src="plugins/summernote/summernote-bs4.min.js"></script>
+  <!-- overlayScrollbars -->
+  <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+  <!-- AdminLTE App -->
+  <script src="dist/js/adminlte.js"></script>
+  <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+  <script src="dist/js/pages/dashboard.js"></script>
+  <!-- AdminLTE for demo purposes -->
+  <script src="dist/js/demo.js"></script>
+  <script src="dist/js/main.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>

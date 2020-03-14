@@ -86,8 +86,8 @@ const platform_requirement = document.getElementById('platform_requirement')
 //   }
 
 // mutation{
-//     insert_unique_selling_points(objects:[{
-//       usp: "We deliver sell fresh produce"
+    // insert_unique_selling_points(objects:[{
+    //   usp: "We deliver sell fresh produce"
 //       concept: 9
 //       created_by: 3
 //       updated_by: 3
@@ -97,9 +97,9 @@ const platform_requirement = document.getElementById('platform_requirement')
 //   }
 
 // mutation{
-//     insert_platforms(objects:[{
-//       name:"Social media"
-//       requirement: " engament hash tags"
+    // insert_platforms(objects:[{
+    //   name:"Social media"
+    //   requirement: " engament hash tags"
 //       concept: 9
 //       created_by: 3
 //       updated_by: 3
@@ -109,11 +109,11 @@ const platform_requirement = document.getElementById('platform_requirement')
 //   }
 
 // mutation{
-//     insert_target_audience(objects:[{
-//       name:"gen z"
-//       age_group:"12 - 18 years old"
-//       gender: "both male and female"
-//       location: "Kasoa and Achimota"
+    // insert_target_audience(objects:[{
+    //   name:"gen z"
+    //   age_group:"12 - 18 years old"
+    //   gender: "both male and female"
+    //   location: "Kasoa and Achimota"
 //       concept: 9
 //       created_by: 3
 //       updated_by: 3

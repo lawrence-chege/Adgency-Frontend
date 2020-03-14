@@ -28,7 +28,7 @@
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
   <script src="https://kit.fontawesome.com/78fb37d7fa.js" crossorigin="anonymous"></script>
 </head>
-<body class="hold-transition sidebar-mini layout-fixed">
+<body class="hold-transition sidebar-mini layout-fixed" onload="getCompanies()">
 <div class="wrapper">
 
   <!-- Navbar -->
@@ -49,88 +49,10 @@
     <!-- Sidebar -->
       <!-- Sidebar Menu -->
       <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <li class="nav-item has-treeview menu-open">
-            <a href="#" class="nav-link active">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p>Dashboard
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-          </li>
-          <li class="nav-item has-treeview menu-open">
-            <a href="#" class="nav-link active">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p> Origin 8
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="concept.html" class="nav-link">
-                  <i class="fa fa-info-circle nav-icon"></i>
-                  <p>Concept</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="quote.html" class="nav-link">
-                  <i class="fa fa-money nav-icon"></i>
-                  <p>Quote</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="contract.html" class="nav-link">
-                  <i class="fa fa-thumbs-up nav-icon"></i>
-                  <p>Contract</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="ideation.html" class="nav-link">
-                  <i class="fa fa-lightbulb-o nav-icon"></i>
-                  <p>Ideation</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="design.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Design</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="personel.html" class="nav-link">
-                  <i class="fa fa-users nav-icon"></i>
-                  <p>Personel</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="final.html" class="nav-link active">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Final Output</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <!--Company B-->
-          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-            <li class="nav-item has-treeview menu-open">
-              <a href="#" class="nav-link active">
-                <i class="nav-icon fas fa-tachometer-alt"></i>
-                <p>Company B
-                  <i class="right fas fa-angle-left"></i>
-                </p>
-              </a>
-            </li>
-            <!--Company C-->
-            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-              <li class="nav-item has-treeview menu-open">
-                <a href="#" class="nav-link active">
-                  <i class="nav-icon fas fa-tachometer-alt"></i>
-                  <p>Company C
-                    <i class="right fas fa-angle-left"></i>
-                  </p>
-                </a>
-              </li>
-            </ul>
+        <ul id="play" class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+        </ul>
       </nav>
     </div>
   </aside>
@@ -156,8 +78,11 @@
     <!-- /.content-header -->
 
     <!-- Main content -->
+    <div id="main-content">
+      
+    </div>
 
-
+ 
   <footer class="main-footer">
     <strong>Copyright &copy;<a href="http://adminlte.io">Adgency</a>.</strong>
     All rights reserved.
@@ -205,5 +130,6 @@
 <script src="dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
+<script src="dist/js/get-companies.js"></script>
 </body>
 </html>

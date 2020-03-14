@@ -29,6 +29,7 @@
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Source+Sans+Pro&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/78fb37d7fa.js" crossorigin="anonymous"></script>
+  <script src="dist/js/get-concept.js"></script>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed" onload="getConcept()">
 <div class="wrapper">
@@ -52,30 +53,26 @@
       <!-- Sidebar Menu -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
-               <li class="nav-item has-treeview menu-open">
-                <a href="dashboard.html" class="nav-link active">
-                  <i class="nav-icon fas fa-tachometer-alt"></i>
-                  <p>
-                    Dashboard
-                    <i class="right fas fa-angle-left"></i>
-                  </p>
-                </a>
-              </li>
-        <li class="nav-item has-treeview menu-open">
-            <a href="#" class="nav-link active" style="background-color: #ff914d;">
+          <li class="nav-item has-treeview menu-open">
+            <a href="#" class="nav-link active">
               <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p>
-                Company A
+              <p>Dashboard
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+          </li>
+          <li class="nav-item has-treeview menu-open">
+            <a href="#" class="nav-link active">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p> Origin 8
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link active">
+                <a href="concept.html" class="nav-link active">
                   <i class="fa fa-info-circle nav-icon"></i>
-                  <p >Concept</p>
+                  <p>Concept</p>
                 </a>
               </li>
               <li class="nav-item">
@@ -118,32 +115,25 @@
           </li>
           <!--Company B-->
           <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-            <!-- Add icons to the links using the .nav-icon class
-                 with font-awesome or any other icon font library -->
             <li class="nav-item has-treeview menu-open">
-              <a href="#" class="nav-link active" style="background-color: #ff914d;">
+              <a href="#" class="nav-link active">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
-                <p>
-                  Company B
+                <p>Company B
                   <i class="right fas fa-angle-left"></i>
                 </p>
               </a>
             </li>
             <!--Company C-->
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                <!-- Add icons to the links using the .nav-icon class
-                     with font-awesome or any other icon font library -->
-                <li class="nav-item has-treeview menu-open">
-                  <a href="#" class="nav-link active" style="background-color: #ff914d;">
-                    <i class="nav-icon fas fa-tachometer-alt"></i>
-                    <p>
-                      Company C
-                      <i class="right fas fa-angle-left"></i>
-                    </p>
-                  </a>
-                  </ul>
-                </li>
-        </ul>
+              <li class="nav-item has-treeview menu-open">
+                <a href="#" class="nav-link active">
+                  <i class="nav-icon fas fa-tachometer-alt"></i>
+                  <p>Company C
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+              </li>
+            </ul>
       </nav>
     </div>
   </aside>
@@ -219,7 +209,7 @@
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
 
-<script src="dist/js/get-concept.js"></script>
+
   <!-- jQuery -->
   <script src="plugins/jquery/jquery.min.js"></script>
   <!-- jQuery UI 1.11.4 -->
