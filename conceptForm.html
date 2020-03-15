@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/78fb37d7fa.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="dist/css/simple-lightbox.min.css">
+    <link rel="stylesheet" href="dist/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Caladea|Cookie&display=swap" rel="stylesheet">
+    <title>Enter your Creative Brief</title>
+</head>
+
+<body id="conceptForm">
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">Adgency</h1>
+            <ul class="nav">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="container">
+            <form method="get" onsubmit="return processForm()" class="container-md needs-validation" novalidate>
+                <div class="card justify-content-md-center"" id="productDetails">
+
+                    <div class="card-body form-row">
+                        <div class="card-header">
+                            <h3>Product Details</h3>
+                        </div>
+                        <hr>
+                        <fieldset class="form-group">
+                            <legend>
+                                <h3>Product Name</h3>
+                            </legend>
+                            <div class="form-group ">
+                                <label for="productName">What product/service do you want to promote?</label>
+                                <input type="textarea" placeholder="Product Name" class="form-control " id="productName"
+                                    aria-describedby="Product Name" required>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Please enter product name.
+                                </div>
+
+                            </div>
+
+                        </fieldset>
+                        
+                        <fieldset class="form-group">
+                            <legend>
+                                <h3>Product Category</h3>
+                            </legend>
+                            <div class="form-group ">
+                                <label for="productCategory">What industrial category is your product? </label>
+                                <input type="textarea" placeholder="Product Category" class="form-control"
+                                    id="productCategory" list="categories" required />
+                                <datalist id="categories">
+                                    <option>Entertainment</option>
+                                    <option> Food and Beverage</option>
+                                    <option>Cosmetics</option>
+                                    <option>Software</option>
+                                    <option>Home Apliances</option>
+                                    <option>Clothing</option>
+                                </datalist>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Please choose a category.
+                                </div>
+                                
+
+                            </div>
+
+                        </fieldset>
+                        <fieldset class="form-group col-md-3 mb-3">
+                            <legend>
+                                <h3>Product Image</h3>
+                            </legend>
+                            <div class="form-group ">
+                                    <input type="file" placeholder="Product Image" class="form-control" id="productImage"
+                                     aria-describedby="Product Image">
+                                
+                            </div>
+
+                            <img src="" id="productImg" />
+
+                        </fieldset>
+
+                        <div class="clearfix">
+                            <button type="button" id="btnFirstQuestion" class="btn btn-info"
+                                onclick="processFirstQuestion()">Next</button></br>
+                        </div>
+                    </div>
+                </div>
+                <div class="card justify-content-md-center"" id="customerDetails">
+
+                    <div class="card-body form-row">
+                        <div class="card-header">
+                            <h3>Customer Details</h3>
+                        </div><br>
+                        <hr>
+                       
+                        <fieldset class="form-group col-md-5 mb-2">
+                            <legend>
+                                <h3>Target Customer</h3>
+                            </legend>
+                            <div class="form-group ">
+                                <label for="customerGroup">Who do you want to reach?</label>
+                                <input type="textarea" placeholder="Target audience group" class="form-control"
+                                    id="customerGroup" required>
+
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Please provide a target group.
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="textarea" placeholder="Age Group. eg 18-35 " class="form-control"
+                                    id="ageGroup" required>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Please provide age group.
+                                </div>
+
+                            </div>
+                            <div class="form-group">
+                                <input type="textarea" placeholder="Location. eg Accra " class="form-control"
+                                    id="location" required>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Please provide a target location.
+                                </div>
+
+                            </div>
+                            <div class="form-group">
+                                <input type="textarea" placeholder="Female .." class="form-control" id="gender"
+                                    list="sex" required />
+                                <datalist id="sex">
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                    <option>Both</option>
+                                </datalist>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Please provide gender
+                                </div>
+                            </div>
+
+                        </fieldset>
+                        <fieldset class="form-group col-md-5 mb-2">
+                                <legend>
+                                    <h3>Overview</h3>
+                                </legend>
+                                <div class="form-group">
+                                    <label for="customerOverview">What is the customer need?</label>
+                                    <input type="textarea" placeholder="Customer need" class="form-control "
+                                        id="customerOverview" aria-describedby="Customer Overview" required>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Please enter customer need.
+                                    </div>
+                                </div>
+                            </fieldset>
+                        <div class="clearfix">
+                            <button type="button" id="btnCustomerDetails" class="btn btn-info"
+                                onclick="processCustomerDetails()">Next</button></br>
+                            <div class="clearfix"></div>
+                            <button type="button" id="btncustomerQuestion" class="btn btn-outline-info"
+                                onclick="backToProduct()">Previous</button></br>
+                        </div>
+
+                        
+                    </div>
+                </div>
+                <div class="card justify-content-md-center"" id="promoGoals">
+
+                    <div class="card-body form-row">
+                        <div class="card-header">
+                            <h3>Goals & Insights</h3>
+                        </div><br>
+                        <hr>
+
+                        <fieldset class="form-group col-md-4 mb-2">
+                            <legend>
+                                <h3>Objectives</h3>
+                            </legend>
+                            <div class="form-group ">
+                                <label for="objectives">Why do we have to communicate this?</label>
+                                <input type="textarea" placeholder="Objectives" class="form-control" id="objectives"
+                                    required>
+
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Please provide an objective.;
+                                </div>
+                            </div>
+
+                        </fieldset>
+                        <fieldset class="form-group col-md-4 mb-2">
+                            <legend>
+                                <h3>Unique Selling Points</h3>
+                            </legend>
+                            <div class="form-group">
+                                <label for="uniquePoint">What makes your product special and competitive over
+                                    others?</label>
+                                <input type="textarea" placeholder="Unique Selling Point" class="form-control "
+                                    id="uniquePoint" aria-describedby="Unique Selling Points" required>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Please enter a unique selling point.
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset class="form-group col-md-4 mb-2">
+                            <legend>
+                                <h3>Insights</h3>
+                            </legend>
+                            <div class="form-group">
+                                <label for="insight">Why do you think the customer needs the product?</label>
+                                <input type="textarea" placeholder="Insight " class="form-control " id="insight"
+                                    aria-describedby="Insights" required>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Please enter an insight.
+                                </div>
+                            </div>
+                        </fieldset>
+                        <div class="clearfix">
+                            <button type="button" id="btnpromoGoals" class="btn btn-info"
+                                onclick="processPromoGoals()">Next</button></br>
+                            <div class="clearfix"></div>
+                            <button type="button" id="btngoalsQuestion" class="btn btn-outline-info"
+                                onclick="backToCustomer()">Previous</button></br>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="card justify-content-md-center"" id="toneAndStyle">
+
+                    <div class="card-body form-row">
+                        <div class="card-header">
+                            <h3>Brand Communication</h3>
+                        </div><br>
+                        <hr>
+
+                        <fieldset class="form-group col-md-4 mb-2">
+                            <legend>
+                                <h3>Tone</h3>
+                            </legend>
+                            <div class="form-group ">
+                                <label for="tone">How would you like to sound to customers?</label>
+                                <input type="textarea" placeholder="Communication tone" class="form-control" id="tone"
+                                    list="tones" required/>
+                                    <datalist id="tones">
+                                        <option>Confident</option>
+                                        <option>Reassuring</option>
+                                        <option>Educational</option>
+                                        <option>Comic</option>
+                                    </datalist>
+
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Please provide a communication tone.
+                                </div>
+                            </div>
+
+                        </fieldset>
+                        <fieldset class="form-group col-md-4 mb-2">
+                            <legend>
+                                <h3>Style</h3>
+                            </legend>
+                            <div class="form-group ">
+                                <label for="style">How do you like to communicate with to your customers?</label>
+                                <input type="textarea" placeholder="Communication style" class="form-control" id="style"
+                                    list="styles" required/>
+                                    <datalist id="styles">
+                                        <option value="a">Assertive</option>
+                                        <option value="i">Informal</option>
+                                        <option value="fr">Friendly</option>
+                                    </datalist>
+
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Please provide a communication style.
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset class="form-group col-md-4 mb-2">
+                            <legend>
+                                <h3>Platform</h3>
+                            </legend>
+                            <div class="form-group">
+                                <label for="platform">What platfrom would you like to use?</label>
+                                <input type="textarea" placeholder="Platform..ie Tv, Radio " class="form-control " id="platform"
+                                    aria-describedby="platforms" list="plat" required>
+                                    <datalist id="plat">
+                                        <option value="rs">Radio</option>
+                                        <option value="ts">TV </option>
+                                        <option value="bc">Billboard </option>
+                                        <option value="pc">Print Concept</option>
+                                        <option value="pc">Social media</option>
+                                    </datalist>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Please choose a platform.
+                                </div>
+                            </div>
+                        </fieldset>
+                        <div class="clearfix">
+                            <button type="submit" id="btnpromoGoals" class="btn btn-info"
+                                onclick="processTone()">Submit</button></br>
+                            <div class="clearfix"></div>
+                            <button type="button" id="btngoalsQuestion" class="btn btn-outline-info"
+                                onclick="backToPromo()">Previous</button></br>
+                        </div>
+
+
+                    </div>
+                </div>
+                    
+                   
+                    
+            
+                </form>
+    </section>
+    <footer class="section-footer">
+            <div class="container">
+                <div>
+                    <h3>CONTACT US</h3>
+                    <a href="http://twitter.com">
+                        <i class="fab fa-twitter fa-2x"></i>
+                    </a>
+                    <a href="http://fcebook.com">
+                        <i class="fab fa-facebook fa-2x"></i>
+                    </a>
+                    <a href="http://instagram.com">
+                        <i class="fab fa-instagram fa-2x"></i>
+                    </a>
+                </div>
+                <div>
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Customer Stories</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Testimonials</h3>
+                    <ul>
+                        <li><a href="#">Collaboration</a></li>
+                        <li><a href="#">Ideation</a></li>
+                        <li><a href="#">Conceptualization</a></li>
+                        <li><a href="#">Final Product</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Subscribe</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <form name="email-form" method="POST" data-netlify="true">
+                        <div class="email-form">
+                            <span class="form-control-wrap">
+                                <input
+                                type="email"
+                                name="email"
+                                id="email"
+                                size="40"
+                                class="form-control"
+                                placeholder="Email">
+                            </span>
+                            <button type="submit" class="form-control submit">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </footer>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="dist/js/simple-lightbox.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <script>
+        $(function () {
+            const $gallery = $('.gallery a').simplelightbox();
+        })
+        
+    </script>
+   
+    <script src="dist/js/conceptForm.js"></script>
+</body>
+
+</html>
