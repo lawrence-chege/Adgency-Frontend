@@ -1,336 +1,963 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 3 | Dashboard</title>
-  <!-- Tell the browser to be responsive to screen width -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
-  <!-- Ionicons -->
-  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-  <!-- Tempusdominus Bbootstrap 4 -->
-  <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
-  <!-- iCheck -->
-  <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
-  <!-- JQVMap -->
-  <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
-  <!-- Theme style -->
-  <link rel="stylesheet" href="dist/css/adminlte.min.css">
-  <!-- overlayScrollbars -->
-  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
-  <!-- Daterange picker -->
-  <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
-  <!-- summernote -->
-  <link rel="stylesheet" href="plugins/summernote/summernote-bs4.css">
-  <!-- Google Font: Source Sans Pro -->
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/78fb37d7fa.js" crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Adgency | Dashboard | Concept</title>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
+    <meta name="description" content="This is an example dashboard created using build-in elements and components.">
+    <meta name="msapplication-tap-highlight" content="no">
+    <!--
+    =========================================================
+    * ArchitectUI HTML Theme Dashboard - v1.0.0
+    =========================================================
+    * Product Page: https://dashboardpack.com
+    * Copyright 2019 DashboardPack (https://dashboardpack.com)
+    * Licensed under MIT (https://github.com/DashboardPack/architectui-html-theme-free/blob/master/LICENSE)
+    =========================================================
+    * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+    -->
+    <link href="./main.css" rel="stylesheet">
 </head>
-<body class="hold-transition sidebar-mini layout-fixed">
-<div class="wrapper">
 
-  <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+<body>
+    <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
+        <div class="app-header header-shadow">
+            <div class="app-header__logo">
+                <div class="logo-src"></div>
+                <div class="header__pane ml-auto">
+                    <div>
+                        <button type="button" class="hamburger close-sidebar-btn hamburger--elastic"
+                            data-class="closed-sidebar">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="app-header__mobile-menu">
+                <div>
+                    <button type="button" class="hamburger hamburger--elastic mobile-toggle-nav">
+                        <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <div class="app-header__menu">
+                <span>
+                    <button type="button"
+                        class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
+                        <span class="btn-icon-wrapper">
+                            <i class="fa fa-ellipsis-v fa-w-6"></i>
+                        </span>
+                    </button>
+                </span>
+            </div>
+            <div class="app-header__content">
+                <div class="app-header-left">
+                    <div class="search-wrapper">
+                        <div class="input-holder">
+                            <input type="text" class="search-input" placeholder="Type to search">
+                            <button class="search-icon"><span></span></button>
+                        </div>
+                        <button class="close"></button>
+                    </div>
+                    <ul class="header-menu nav">
+                        <li class="nav-item">
+                            <a href="javascript:void(0);" class="nav-link">
+                                <i class="nav-link-icon fa fa-database"> </i>
+                                Statistics
+                            </a>
+                        </li>
+                        <li class="btn-group nav-item">
+                            <a href="javascript:void(0);" class="nav-link">
+                                <i class="nav-link-icon fa fa-edit"></i>
+                                Projects
+                            </a>
+                        </li>
+                        <li class="dropdown nav-item">
+                            <a href="javascript:void(0);" class="nav-link">
+                                <i class="nav-link-icon fa fa-cog"></i>
+                                Settings
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="app-header-right">
+                    <div class="header-btn-lg pr-0">
+                        <div class="widget-content p-0">
+                            <div class="widget-content-wrapper">
+                                <div class="widget-content-left">
+                                    <div class="btn-group">
+                                        <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                            class="p-0 btn">
+                                            <img width="42" class="rounded-circle" src="assets/images/avatars/10.jpg"
+                                                alt="">
+                                            <i class="fa fa-angle-down ml-2 opacity-8"></i>
+                                        </a>
+                                        <div tabindex="-1" role="menu" aria-hidden="true"
+                                            class="dropdown-menu dropdown-menu-right">
+                                            <button type="button" tabindex="0" class="dropdown-item">User
+                                                Account</button>
+                                            <button type="button" tabindex="0" class="dropdown-item">Settings</button>
+                                            <h6 tabindex="-1" class="dropdown-header">Header</h6>
+                                            <button type="button" tabindex="0" class="dropdown-item">Actions</button>
+                                            <div tabindex="-1" class="dropdown-divider"></div>
+                                            <button type="button" tabindex="0" class="dropdown-item">Dividers</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-content-left  ml-3 header-user-info">
+                                    <div class="widget-heading">
+                                        Alina Mclourd
+                                    </div>
+                                    <div class="widget-subheading">
+                                        VP People Manager
+                                    </div>
+                                </div>
+                                <div class="widget-content-right header-user-info ml-3">
+                                    <button type="button"
+                                        class="btn-shadow p-1 btn btn-primary btn-sm show-toastr-example">
+                                        <i class="fa text-white fa-calendar pr-1 pl-1"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ui-theme-settings">
+            <button type="button" id="TooltipDemo" class="btn-open-options btn btn-warning">
+                <i class="fa fa-cog fa-w-16 fa-spin fa-2x"></i>
+            </button>
+            <div class="theme-settings__inner">
+                <div class="scrollbar-container">
+                    <div class="theme-settings__options-wrapper">
+                        <h3 class="themeoptions-heading">Layout Options
+                        </h3>
+                        <div class="p-3">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <div class="widget-content p-0">
+                                        <div class="widget-content-wrapper">
+                                            <div class="widget-content-left mr-3">
+                                                <div class="switch has-switch switch-container-class"
+                                                    data-class="fixed-header">
+                                                    <div class="switch-animate switch-on">
+                                                        <input type="checkbox" checked data-toggle="toggle"
+                                                            data-onstyle="success">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="widget-content-left">
+                                                <div class="widget-heading">Fixed Header
+                                                </div>
+                                                <div class="widget-subheading">Makes the header top fixed, always
+                                                    visible!
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="widget-content p-0">
+                                        <div class="widget-content-wrapper">
+                                            <div class="widget-content-left mr-3">
+                                                <div class="switch has-switch switch-container-class"
+                                                    data-class="fixed-sidebar">
+                                                    <div class="switch-animate switch-on">
+                                                        <input type="checkbox" checked data-toggle="toggle"
+                                                            data-onstyle="success">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="widget-content-left">
+                                                <div class="widget-heading">Fixed Sidebar
+                                                </div>
+                                                <div class="widget-subheading">Makes the sidebar left fixed, always
+                                                    visible!
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="widget-content p-0">
+                                        <div class="widget-content-wrapper">
+                                            <div class="widget-content-left mr-3">
+                                                <div class="switch has-switch switch-container-class"
+                                                    data-class="fixed-footer">
+                                                    <div class="switch-animate switch-off">
+                                                        <input type="checkbox" data-toggle="toggle"
+                                                            data-onstyle="success">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="widget-content-left">
+                                                <div class="widget-heading">Fixed Footer
+                                                </div>
+                                                <div class="widget-subheading">Makes the app footer bottom fixed, always
+                                                    visible!
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <h3 class="themeoptions-heading">
+                            <div>
+                                Header Options
+                            </div>
+                            <button type="button"
+                                class="btn-pill btn-shadow btn-wide ml-auto btn btn-focus btn-sm switch-header-cs-class"
+                                data-class="">
+                                Restore Default
+                            </button>
+                        </h3>
+                        <div class="p-3">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <h5 class="pb-2">Choose Color Scheme
+                                    </h5>
+                                    <div class="theme-settings-swatches">
+                                        <div class="swatch-holder bg-primary switch-header-cs-class"
+                                            data-class="bg-primary header-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-secondary switch-header-cs-class"
+                                            data-class="bg-secondary header-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-success switch-header-cs-class"
+                                            data-class="bg-success header-text-dark">
+                                        </div>
+                                        <div class="swatch-holder bg-info switch-header-cs-class"
+                                            data-class="bg-info header-text-dark">
+                                        </div>
+                                        <div class="swatch-holder bg-warning switch-header-cs-class"
+                                            data-class="bg-warning header-text-dark">
+                                        </div>
+                                        <div class="swatch-holder bg-danger switch-header-cs-class"
+                                            data-class="bg-danger header-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-light switch-header-cs-class"
+                                            data-class="bg-light header-text-dark">
+                                        </div>
+                                        <div class="swatch-holder bg-dark switch-header-cs-class"
+                                            data-class="bg-dark header-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-focus switch-header-cs-class"
+                                            data-class="bg-focus header-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-alternate switch-header-cs-class"
+                                            data-class="bg-alternate header-text-light">
+                                        </div>
+                                        <div class="divider">
+                                        </div>
+                                        <div class="swatch-holder bg-vicious-stance switch-header-cs-class"
+                                            data-class="bg-vicious-stance header-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-midnight-bloom switch-header-cs-class"
+                                            data-class="bg-midnight-bloom header-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-night-sky switch-header-cs-class"
+                                            data-class="bg-night-sky header-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-slick-carbon switch-header-cs-class"
+                                            data-class="bg-slick-carbon header-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-asteroid switch-header-cs-class"
+                                            data-class="bg-asteroid header-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-royal switch-header-cs-class"
+                                            data-class="bg-royal header-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-warm-flame switch-header-cs-class"
+                                            data-class="bg-warm-flame header-text-dark">
+                                        </div>
+                                        <div class="swatch-holder bg-night-fade switch-header-cs-class"
+                                            data-class="bg-night-fade header-text-dark">
+                                        </div>
+                                        <div class="swatch-holder bg-sunny-morning switch-header-cs-class"
+                                            data-class="bg-sunny-morning header-text-dark">
+                                        </div>
+                                        <div class="swatch-holder bg-tempting-azure switch-header-cs-class"
+                                            data-class="bg-tempting-azure header-text-dark">
+                                        </div>
+                                        <div class="swatch-holder bg-amy-crisp switch-header-cs-class"
+                                            data-class="bg-amy-crisp header-text-dark">
+                                        </div>
+                                        <div class="swatch-holder bg-heavy-rain switch-header-cs-class"
+                                            data-class="bg-heavy-rain header-text-dark">
+                                        </div>
+                                        <div class="swatch-holder bg-mean-fruit switch-header-cs-class"
+                                            data-class="bg-mean-fruit header-text-dark">
+                                        </div>
+                                        <div class="swatch-holder bg-malibu-beach switch-header-cs-class"
+                                            data-class="bg-malibu-beach header-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-deep-blue switch-header-cs-class"
+                                            data-class="bg-deep-blue header-text-dark">
+                                        </div>
+                                        <div class="swatch-holder bg-ripe-malin switch-header-cs-class"
+                                            data-class="bg-ripe-malin header-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-arielle-smile switch-header-cs-class"
+                                            data-class="bg-arielle-smile header-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-plum-plate switch-header-cs-class"
+                                            data-class="bg-plum-plate header-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-happy-fisher switch-header-cs-class"
+                                            data-class="bg-happy-fisher header-text-dark">
+                                        </div>
+                                        <div class="swatch-holder bg-happy-itmeo switch-header-cs-class"
+                                            data-class="bg-happy-itmeo header-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-mixed-hopes switch-header-cs-class"
+                                            data-class="bg-mixed-hopes header-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-strong-bliss switch-header-cs-class"
+                                            data-class="bg-strong-bliss header-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-grow-early switch-header-cs-class"
+                                            data-class="bg-grow-early header-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-love-kiss switch-header-cs-class"
+                                            data-class="bg-love-kiss header-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-premium-dark switch-header-cs-class"
+                                            data-class="bg-premium-dark header-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-happy-green switch-header-cs-class"
+                                            data-class="bg-happy-green header-text-light">
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <h3 class="themeoptions-heading">
+                            <div>Sidebar Options</div>
+                            <button type="button"
+                                class="btn-pill btn-shadow btn-wide ml-auto btn btn-focus btn-sm switch-sidebar-cs-class"
+                                data-class="">
+                                Restore Default
+                            </button>
+                        </h3>
+                        <div class="p-3">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <h5 class="pb-2">Choose Color Scheme
+                                    </h5>
+                                    <div class="theme-settings-swatches">
+                                        <div class="swatch-holder bg-primary switch-sidebar-cs-class"
+                                            data-class="bg-primary sidebar-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-secondary switch-sidebar-cs-class"
+                                            data-class="bg-secondary sidebar-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-success switch-sidebar-cs-class"
+                                            data-class="bg-success sidebar-text-dark">
+                                        </div>
+                                        <div class="swatch-holder bg-info switch-sidebar-cs-class"
+                                            data-class="bg-info sidebar-text-dark">
+                                        </div>
+                                        <div class="swatch-holder bg-warning switch-sidebar-cs-class"
+                                            data-class="bg-warning sidebar-text-dark">
+                                        </div>
+                                        <div class="swatch-holder bg-danger switch-sidebar-cs-class"
+                                            data-class="bg-danger sidebar-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-light switch-sidebar-cs-class"
+                                            data-class="bg-light sidebar-text-dark">
+                                        </div>
+                                        <div class="swatch-holder bg-dark switch-sidebar-cs-class"
+                                            data-class="bg-dark sidebar-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-focus switch-sidebar-cs-class"
+                                            data-class="bg-focus sidebar-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-alternate switch-sidebar-cs-class"
+                                            data-class="bg-alternate sidebar-text-light">
+                                        </div>
+                                        <div class="divider">
+                                        </div>
+                                        <div class="swatch-holder bg-vicious-stance switch-sidebar-cs-class"
+                                            data-class="bg-vicious-stance sidebar-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-midnight-bloom switch-sidebar-cs-class"
+                                            data-class="bg-midnight-bloom sidebar-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-night-sky switch-sidebar-cs-class"
+                                            data-class="bg-night-sky sidebar-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-slick-carbon switch-sidebar-cs-class"
+                                            data-class="bg-slick-carbon sidebar-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-asteroid switch-sidebar-cs-class"
+                                            data-class="bg-asteroid sidebar-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-royal switch-sidebar-cs-class"
+                                            data-class="bg-royal sidebar-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-warm-flame switch-sidebar-cs-class"
+                                            data-class="bg-warm-flame sidebar-text-dark">
+                                        </div>
+                                        <div class="swatch-holder bg-night-fade switch-sidebar-cs-class"
+                                            data-class="bg-night-fade sidebar-text-dark">
+                                        </div>
+                                        <div class="swatch-holder bg-sunny-morning switch-sidebar-cs-class"
+                                            data-class="bg-sunny-morning sidebar-text-dark">
+                                        </div>
+                                        <div class="swatch-holder bg-tempting-azure switch-sidebar-cs-class"
+                                            data-class="bg-tempting-azure sidebar-text-dark">
+                                        </div>
+                                        <div class="swatch-holder bg-amy-crisp switch-sidebar-cs-class"
+                                            data-class="bg-amy-crisp sidebar-text-dark">
+                                        </div>
+                                        <div class="swatch-holder bg-heavy-rain switch-sidebar-cs-class"
+                                            data-class="bg-heavy-rain sidebar-text-dark">
+                                        </div>
+                                        <div class="swatch-holder bg-mean-fruit switch-sidebar-cs-class"
+                                            data-class="bg-mean-fruit sidebar-text-dark">
+                                        </div>
+                                        <div class="swatch-holder bg-malibu-beach switch-sidebar-cs-class"
+                                            data-class="bg-malibu-beach sidebar-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-deep-blue switch-sidebar-cs-class"
+                                            data-class="bg-deep-blue sidebar-text-dark">
+                                        </div>
+                                        <div class="swatch-holder bg-ripe-malin switch-sidebar-cs-class"
+                                            data-class="bg-ripe-malin sidebar-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-arielle-smile switch-sidebar-cs-class"
+                                            data-class="bg-arielle-smile sidebar-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-plum-plate switch-sidebar-cs-class"
+                                            data-class="bg-plum-plate sidebar-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-happy-fisher switch-sidebar-cs-class"
+                                            data-class="bg-happy-fisher sidebar-text-dark">
+                                        </div>
+                                        <div class="swatch-holder bg-happy-itmeo switch-sidebar-cs-class"
+                                            data-class="bg-happy-itmeo sidebar-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-mixed-hopes switch-sidebar-cs-class"
+                                            data-class="bg-mixed-hopes sidebar-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-strong-bliss switch-sidebar-cs-class"
+                                            data-class="bg-strong-bliss sidebar-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-grow-early switch-sidebar-cs-class"
+                                            data-class="bg-grow-early sidebar-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-love-kiss switch-sidebar-cs-class"
+                                            data-class="bg-love-kiss sidebar-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-premium-dark switch-sidebar-cs-class"
+                                            data-class="bg-premium-dark sidebar-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-happy-green switch-sidebar-cs-class"
+                                            data-class="bg-happy-green sidebar-text-light">
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <h3 class="themeoptions-heading">
+                            <div>Main Content Options</div>
+                            <button type="button"
+                                class="btn-pill btn-shadow btn-wide ml-auto active btn btn-focus btn-sm">Restore Default
+                            </button>
+                        </h3>
+                        <div class="p-3">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <h5 class="pb-2">Page Section Tabs
+                                    </h5>
+                                    <div class="theme-settings-swatches">
+                                        <div role="group" class="mt-2 btn-group">
+                                            <button type="button"
+                                                class="btn-wide btn-shadow btn-primary btn btn-secondary switch-theme-class"
+                                                data-class="body-tabs-line">
+                                                Line
+                                            </button>
+                                            <button type="button"
+                                                class="btn-wide btn-shadow btn-primary active btn btn-secondary switch-theme-class"
+                                                data-class="body-tabs-shadow">
+                                                Shadow
+                                            </button>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="app-main">
+            <div class="app-sidebar sidebar-shadow">
+                <div class="app-header__logo">
+                    <div class="logo-src"></div>
+                    <div class="header__pane ml-auto">
+                        <div>
+                            <button type="button" class="hamburger close-sidebar-btn hamburger--elastic"
+                                data-class="closed-sidebar">
+                                <span class="hamburger-box">
+                                    <span class="hamburger-inner"></span>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-header__mobile-menu">
+                    <div>
+                        <button type="button" class="hamburger hamburger--elastic mobile-toggle-nav">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="app-header__menu">
+                    <span>
+                        <button type="button"
+                            class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
+                            <span class="btn-icon-wrapper">
+                                <i class="fa fa-ellipsis-v fa-w-6"></i>
+                            </span>
+                        </button>
+                    </span>
+                </div>
+                <div class="scrollbar-sidebar">
+                    <div class="app-sidebar__inner">
+                        <ul class="vertical-nav-menu">
+                            <li class="app-sidebar__heading">Dashboards</li>
+                            <li>
+                                <a href="index.html">
+                                    <i class="metismenu-icon pe-7s-rocket"></i>
 
-  </nav>
-  <!-- /.navbar -->
+                                </a>
+                            </li>
+                            <li class="app-sidebar__heading">Clients</li>
+                            <li>
+                                <a href="#">
+                                    <i class="metismenu-icon pe-7s-diamond"></i>
+                                    Origin 8
+                                    <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                                </a>
+                                <ul>
+                                    <li>
+                                        <a href="concept.html">
+                                            <i class="metismenu-icon"></i>
+                                            Concept
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="quote.html">
+                                            <i class="metismenu-icon">
+                                            </i>Quote
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="contract.html" class="mm-active">
+                                            <i class="metismenu-icon">
+                                            </i>Contract
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ideation.html">
+                                            <i class="metismenu-icon">
+                                            </i>Ideation
+                                        </a>
+                                    </li>
+                                     <li>
+                                        <a href="content.html">
+                                            <i class="metismenu-icon">
+                                            </i>Content
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="elements-cards.html">
+                                            <i class="metismenu-icon">
+                                            </i>Design
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="elements-list-group.html">
+                                            <i class="metismenu-icon">
+                                            </i>Personel
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="elements-navigation.html">
+                                            <i class="metismenu-icon">
+                                            </i>Final
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="elements-utilities.html">
+                                            <i class="metismenu-icon">
+                                            </i>Payment
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
 
-  <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-primary elevation-4">
-    <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
-      <img src="img/logo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
-           style="opacity: .8">
-      <span class="brand-text font-weight-light">Adgency</span>
-    </a>
 
-    <!-- Sidebar -->
-      <!-- Sidebar Menu -->
-      <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <li class="nav-item has-treeview menu-open">
-            <a href="#" class="nav-link active">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p>Dashboard
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-          </li>
-          <li class="nav-item has-treeview menu-open">
-            <a href="#" class="nav-link active">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p> Origin 8
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="concept.html" class="nav-link ">
-                  <i class="fa fa-info-circle nav-icon"></i>
-                  <p>Concept</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="quote.html" class="nav-link">
-                  <i class="fa fa-money nav-icon"></i>
-                  <p>Quote</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="contract.html" class="nav-link active">
-                  <i class="fa fa-thumbs-up nav-icon"></i>
-                  <p>Contract</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="ideation.html" class="nav-link">
-                  <i class="fa fa-lightbulb-o nav-icon"></i>
-                  <p>Ideation</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="design.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Design</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="personel.html" class="nav-link">
-                  <i class="fa fa-users nav-icon"></i>
-                  <p>Personel</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="final.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Final Output</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <!--Company B-->
-          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-            <li class="nav-item has-treeview menu-open">
-              <a href="#" class="nav-link active">
-                <i class="nav-icon fas fa-tachometer-alt"></i>
-                <p>Company B
-                  <i class="right fas fa-angle-left"></i>
-                </p>
-              </a>
-            </li>
-            <!--Company C-->
-            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-              <li class="nav-item has-treeview menu-open">
-                <a href="#" class="nav-link active">
-                  <i class="nav-icon fas fa-tachometer-alt"></i>
-                  <p>Company C
-                    <i class="right fas fa-angle-left"></i>
-                  </p>
-                </a>
-              </li>
-            </ul>
-      </nav>
+                            <li class="app-sidebar__heading">Team </li>
+                            <li>
+                                <a href="forms-controls.html">
+                                    <i class="metismenu-icon pe-7s-mouse">
+                                    </i>Kevin
+                                </a>
+                            </li>
+                            <li>
+                                <a href="forms-layouts.html">
+                                    <i class="metismenu-icon pe-7s-eyedropper">
+                                    </i>Larry
+                                </a>
+                            </li>
+                            <li>
+                                <a href="forms-validation.html">
+                                    <i class="metismenu-icon pe-7s-pendrive">
+                                    </i>Helen
+                                </a>
+                            </li>
+                            <li class="app-sidebar__heading">Charts</li>
+                            <li>
+                                <a href="charts-chartjs.html">
+                                    <i class="metismenu-icon pe-7s-graph2">
+                                    </i>ChartJS
+                                </a>
+                            </li>
+                            <li class="app-sidebar__heading">PREMIUM Version</li>
+                            <li>
+                                <a href="https://dashboardpack.com/theme-details/architectui-dashboard-html-pro/"
+                                    target="_blank">
+                                    <i class="metismenu-icon pe-7s-graph2">
+                                    </i>
+                                    Upgrade to PREMIUM
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="app-main__outer">
+                <div class="app-main__inner">
+                    <div class="app-page-title">
+                        <div class="page-title-wrapper">
+                            <div class="page-title-heading">
+                                <div class="page-title-icon">
+                                    <i class="pe-7s-car icon-gradient bg-mean-fruit">
+                                    </i>
+                                </div>
+                                <div>Contract
+                                    <div class="page-title-subheading">This is what we expect.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <!-- <div class="col-md-9"> -->
+                            <div id="accordion" class="accordion-wrapper mb-3">
+                                <div class="card">
+                                    <div id="headingOne" class="card-header">
+                                        <button type="button" data-toggle="collapse" data-target="#collapseOne1"
+                                            aria-expanded="true" aria-controls="collapseOne"
+                                            class="text-left m-0 p-0 btn btn-link btn-block">
+                                            <h5 class="m-0 p-0">Introduction</h5>
+                                        </button>
+                                    </div>
+                                    <div data-parent="#accordion" id="introduction" aria-labelledby="headingOne"
+                                        class="collapse show">
+                                        <div class="card-body">This Advertising Agency Agreement
+                                            (“Agreement”) is made and effective this [Date], by and between
+                                            [Advertiser] (“Advertiser”) and [Agency] (“Agency”).
+                                            Agency is in the business of providing advertising agency
+                                            services for a fee.
+                                            Advertiser desires to engage Agency to render, and Agency
+                                            desires to render to Advertiser, certain advertising agency
+                                            services, all as set forth.
+                                            NOW, THEREFORE, in consideration of the mutual agreements and
+                                            covenants herein contained the parties hereto agree as follows:
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div id="headingTwo" class="b-radius-0 card-header">
+                                        <button type="button" data-toggle="collapse" data-target="#engagement"
+                                            aria-expanded="false" aria-controls="collapseTwo"
+                                            class="text-left m-0 p-0 btn btn-link btn-block">
+                                            <h5 class="m-0 p-0">Engagement</h5>
+                                        </button>
+                                    </div>
+                                    <div data-parent="#accordion" id="engagement" class="collapse">
+                                        <div class="card-body">Advertiser engages Agency to render, and
+                                            Agency agrees to render to Advertiser, certain services in
+                                            connection with Advertiser’s planning, preparing and placing of
+                                            advertising for certain of Advertiser’s products as follows:
+                                            A. Analyze Advertiser’s current and proposed products and
+                                            services and present and potential markets.
+                                            B. Create, prepare and submit to Advertiser for its prior
+                                            approval advertising ideas and programs.
+                                            C. Prepare and submit to Advertiser for its prior approval
+                                            estimates of costs and expenses associated with proposed
+                                            advertising ideas and programs.
+                                            D. Design and prepare, or arrange for the design and preparation
+                                            of, advertisements.
+                                            E. Perform such other services as Advertiser may request from
+                                            time to time such as, but not limited to, direct mail
+                                            advertising preparation, speech writing, publicity and public
+                                            relations work, market research and analysis.
+                                            F. Order advertising space, time or other means to be used for
+                                            publication of Advertiser’s advertisements, at all times
+                                            endeavoring to secure the most efficient and advantageous rates
+                                            available.
+                                            G. Proof for accuracy and completeness of insertions, displays,
+                                            broadcasts, or other forms of advertisements.
+                                            H. Audit invoices for space, time, material preparation and
+                                            charges.
+                                            VHS.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div id="headingThree" class="card-header">
+                                        <button type="button" data-toggle="collapse" data-target="#collapseOne3"
+                                            aria-expanded="false" aria-controls="collapseThree"
+                                            class="text-left m-0 p-0 btn btn-link btn-block">
+                                            <h5 class="m-0 p-0">compensation </h5>
+                                        </button>
+                                    </div>
+                                    <div data-parent="#accordion" id="collapseOne3" class="collapse">
+                                        <div class="card-body">A. Agency shall receive an amount equal to
+                                            [Media Commission Rate] of the gross charges levied by media for
+                                            advertising placed therewith by Agency pursuant to this
+                                            Agreement; and [Non- Media Commission Rate] after volume
+                                            discount, of the charges of suppliers of services or properties,
+                                            such as finished art, comprehensive layouts, type composition,
+                                            photostats, engravings, printing, radio and television programs,
+                                            talent, literary, dramatic and musical works, records and
+                                            exhibits, purchased by Agency on Advertiser’s authorization
+                                            during the term of this Agreement; provided that:
+                                            (i) No percentage will be added to Agency charges for packing,
+                                            shipping, express, postage, telephone, telex, fax, travel
+                                            expenses and other out of pocket expenses of Agency personnel;
+                                            and
+                                            (ii) Agency’s commission for outdoor advertising will be the
+                                            standard rate allowed advertising agencies when such rate is
+                                            less than [Outdoor Advertising Commission Rate].
+                                            B. For those items where Agency is not compensated on a
+                                            commission basis, Advertiser shall pay Agency on an hourly basis
+                                            for services provided hereunder. The rate will be determined by
+                                            the type of services provided and the person or persons
+                                            providing such services, but in no event shall the rate exceed
+                                            [Maximum Hourly Rate] per hour. Advertiser may elect in advance
+                                            to be charged on this hourly rate basis. If Advertiser fails to
+                                            notify Agency of its choice, it shall be presumed that
+                                            Advertiser elected to be charged on an hourly rate basis.
+                                            C. In the event that Agency undertakes, at Advertiser’s request
+                                            subject to Advertiser’s prior approval, special projects such as
+                                            those described in Section 1.F above, Agency shall prepare an
+                                            estimate of total charges for any such special project,
+                                            including therein any charges for materials or services
+                                            purchased from outside sources. In the event that Advertiser
+                                            elects to proceed with the special project based upon Agency’s
+                                            estimated cost, Agency shall perform the services with respect
+                                            to such special project at its estimated cost, subject to
+                                            modification as mutually agreed by the parties.
+                                            D. For any special project or other services provided by Agency
+                                            pursuant to this Agreement upon which the parties have not
+                                            agreed as to charges, Advertiser shall pay Agency at its regular
+                                            hourly rates, not to exceed [Dollar Amount] per hour.
+                                            E. Advertiser shall not be obligated to reimburse Agency for any
+                                            travel or other out-of-pocket expenses incurred in the
+                                            performance of services pursuant to this Agreement unless
+                                            expressly agreed by Advertiser in advance.</div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div id="headingcopyrigt" class="card-header">
+                                    <button type="button" data-toggle="collapse" data-target="#copyright"
+                                        aria-expanded="false" aria-controls="collapsecopyright"
+                                        class="text-left m-0 p-0 btn btn-link btn-block">
+                                        <h5 class="m-0 p-0">Copyright</h5>
+                                    </button>
+                                </div>
+                                <div data-parent="#accordion" id="copyright" aria-labelledby="headingcopyright"
+                                    class="collapse">
+                                    <div class="card-body">This Advertising Agency Agreement
+                                        (“Agreement”) is made and effective this [Date], by and between
+                                        [Advertiser] (“Advertiser”) and [Agency] (“Agency”).
+                                        Agency is in the business of providing advertising agency
+                                        services for a fee.
+                                        Advertiser desires to engage Agency to render, and Agency
+                                        desires to render to Advertiser, certain advertising agency
+                                        services, all as set forth.
+                                        NOW, THEREFORE, in consideration of the mutual agreements and
+                                        covenants herein contained the parties hereto agree as follows:
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div id="headingbreach" class="b-radius-0 card-header">
+                                    <button type="button" data-toggle="collapse" data-target="#breach"
+                                        aria-expanded="false" aria-controls="collapsebreach"
+                                        class="text-left m-0 p-0 btn btn-link btn-block">
+                                        <h5 class="m-0 p-0">Breach</h5>
+                                    </button>
+                                </div>
+                                <div data-parent="#accordion" id="breach" class="collapse">
+                                    <div class="card-body">Advertiser engages Agency to render, and
+                                        Agency agrees to render to Advertiser, certain services in
+                                        connection with Advertiser’s planning, preparing and placing of
+                                        advertising for certain of Advertiser’s products as follows:
+                                        A. Analyze Advertiser’s current and proposed products and
+                                        services and present and potential markets.
+                                        B. Create, prepare and submit to Advertiser for its prior
+                                        approval advertising ideas and programs.
+                                        C. Prepare and submit to Advertiser for its prior approval
+                                        estimates of costs and expenses associated with proposed
+                                        advertising ideas and programs.
+                                        D. Design and prepare, or arrange for the design and preparation
+                                        of, advertisements.
+                                        E. Perform such other services as Advertiser may request from
+                                        time to time such as, but not limited to, direct mail
+                                        advertising preparation, speech writing, publicity and public
+                                        relations work, market research and analysis.
+                                        F. Order advertising space, time or other means to be used for
+                                        publication of Advertiser’s advertisements, at all times
+                                        endeavoring to secure the most efficient and advantageous rates
+                                        available.
+                                        G. Proof for accuracy and completeness of insertions, displays,
+                                        broadcasts, or other forms of advertisements.
+                                        H. Audit invoices for space, time, material preparation and
+                                        charges.
+                                        VHS.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div id="headingbilling" class="card-header">
+                                    <button type="button" data-toggle="collapse" data-target="#Billing"
+                                        aria-expanded="false" aria-controls="collapsebilling"
+                                        class="text-left m-0 p-0 btn btn-link btn-block">
+                                        <h5 class="m-0 p-0">Billing </h5>
+                                    </button>
+                                </div>
+                                <div data-parent="#accordion" id="Billing" class="collapse">
+                                    <div class="card-body">A. Agency shall receive an amount equal to
+                                        [Media Commission Rate] of the gross charges levied by media for
+                                        advertising placed therewith by Agency pursuant to this
+                                        Agreement; and [Non- Media Commission Rate] after volume
+                                        discount, of the charges of suppliers of services or properties,
+                                        such as finished art, comprehensive layouts, type composition,
+                                        photostats, engravings, printing, radio and television programs,
+                                        talent, literary, dramatic and musical works, records and
+                                        exhibits, purchased by Agency on Advertiser’s authorization
+                                        during the term of this Agreement; provided that:
+                                        (i) No percentage will be added to Agency charges for packing,
+                                        shipping, express, postage, telephone, telex, fax, travel
+                                        expenses and other out of pocket expenses of Agency personnel;
+                                        and
+                                        (ii) Agency’s commission for outdoor advertising will be the
+                                        standard rate allowed advertising agencies when such rate is
+                                        less than [Outdoor Advertising Commission Rate].
+                                        B. For those items where Agency is not compensated on a
+                                        commission basis, Advertiser shall pay Agency on an hourly basis
+                                        for services provided hereunder. The rate will be determined by
+                                        the type of services provided and the person or persons
+                                        providing such services, but in no event shall the rate exceed
+                                        [Maximum Hourly Rate] per hour. Advertiser may elect in advance
+                                        to be charged on this hourly rate basis. If Advertiser fails to
+                                        notify Agency of its choice, it shall be presumed that
+                                        Advertiser elected to be charged on an hourly rate basis.
+                                        C. In the event that Agency undertakes, at Advertiser’s request
+                                        subject to Advertiser’s prior approval, special projects such as
+                                        those described in Section 1.F above, Agency shall prepare an
+                                        estimate of total charges for any such special project,
+                                        including therein any charges for materials or services
+                                        purchased from outside sources. In the event that Advertiser
+                                        elects to proceed with the special project based upon Agency’s
+                                        estimated cost, Agency shall perform the services with respect
+                                        to such special project at its estimated cost, subject to
+                                        modification as mutually agreed by the parties.
+                                        D. For any special project or other services provided by Agency
+                                        pursuant to this Agreement upon which the parties have not
+                                        agreed as to charges, Advertiser shall pay Agency at its regular
+                                        hourly rates, not to exceed [Dollar Amount] per hour.
+                                        E. Advertiser shall not be obligated to reimburse Agency for any
+                                        travel or other out-of-pocket expenses incurred in the
+                                        performance of services pursuant to this Agreement unless
+                                        expressly agreed by Advertiser in advance.</div>
+
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                    </div><br>
+                    <button class="btn btn-info"> Accept</button>
+                    <button class="btn btn-danger"> Revisit</button>
+                </div>
+            </div>
+        </div>
+        
+
     </div>
-  </aside>
 
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <div class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Dashboard</h1>
-          </div><!-- /.col -->
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Dashboard</li>
-            </ol>
-          </div><!-- /.col -->
-        </div><!-- /.row -->
-      </div><!-- /.container-fluid -->
+    <div class="app-wrapper-footer">
+        <div class="app-footer">
+            <div class="app-footer__inner">
+                <div class="app-footer-left">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a href="javascript:void(0);" class="nav-link">
+                                Call for support
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="javascript:void(0);" class="nav-link">
+                                Send us an email
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="app-footer-right">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a href="javascript:void(0);" class="nav-link">
+                                Twitter
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="javascript:void(0);" class="nav-link">
+                                Instagram
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
-    <!-- /.content-header -->
-
-    <!-- Main content -->
-    <div class="accordion" id="accordionExample">
-      <div class="card">
-        <div class="card-header" id="headingOne">
-          <h2 class="mb-0">
-            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-              Intoduction
-            </button>
-          </h2>
-        </div>
-    
-        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-          <div class="card-body">This Advertising Agency Agreement (“Agreement”) is made and effective this [Date], by and between [Advertiser] (“Advertiser”) and [Agency] (“Agency”).
-
- 
-
-            Agency is in the business of providing advertising agency services for a fee.
-            
-             
-            
-            Advertiser desires to engage Agency to render, and Agency desires to render to Advertiser, certain advertising agency services, all as set forth.
-            
-             
-            
-            NOW, THEREFORE, in consideration of the mutual agreements and covenants herein contained the parties hereto agree as follows:</div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-header" id="headingTwo">
-          <h2 class="mb-0">
-            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-              Engagement
-            </button>
-          </h2>
-        </div>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-          <div class="card-body">Advertiser engages Agency to render, and Agency agrees to render to Advertiser, certain services in connection with Advertiser’s planning, preparing and placing of advertising for certain of Advertiser’s products as follows:
-
- 
-
-            A. Analyze Advertiser’s current and proposed products and services and present and potential markets.
-            
-             
-            
-            B. Create, prepare and submit to Advertiser for its prior approval advertising ideas and programs.
-            
-             
-            
-            C. Prepare and submit to Advertiser for its prior approval estimates of costs and expenses associated with proposed advertising ideas and programs.
-            
-             
-            
-            D. Design and prepare, or arrange for the design and preparation of, advertisements.
-            
-             
-            
-            E. Perform such other services as Advertiser may request from time to time such as, but not limited to, direct mail advertising preparation, speech writing, publicity and public relations work, market research and analysis.
-            
-             
-            
-            F. Order advertising space, time or other means to be used for publication of Advertiser’s advertisements, at all times endeavoring to secure the most efficient and advantageous rates available.
-            
-             
-            
-            G. Proof for accuracy and completeness of insertions, displays, broadcasts, or other forms of advertisements.
-            
-             
-            
-            H. Audit invoices for space, time, material preparation and charges.
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-header" id="headingThree">
-          <h2 class="mb-0">
-            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-              Product
-            </button>
-          </h2>
-        </div>
-        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-          <div class="card-body">Agency’s engagement shall relate to the following products and services of Advertiser: [Products]</div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-header" id="headingFour">
-          <h2 class="mb-0">
-            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-              Exclisivity
-            </button>
-          </h2>
-        </div>
-        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-          <div class="card-body">Agency shall be the [Exclusive or Non-Exclusive] advertising agency in the United States for Advertiser with respect to the products described in Section 2 above</div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-header" id="headingFive">
-          <h2 class="mb-0">
-            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-              Compensation
-            </button>
-          </h2>
-        </div>
-        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
-          <div class="card-body">A. Agency shall receive an amount equal to [Media Commission Rate] of the gross charges levied by media for advertising placed therewith by Agency pursuant to this Agreement; and [Non- Media Commission Rate] after volume discount, of the charges of suppliers of services or properties, such as finished art, comprehensive layouts, type composition, photostats, engravings, printing, radio and television programs, talent, literary, dramatic and musical works, records and exhibits, purchased by Agency on Advertiser’s authorization during the term of this Agreement; provided that:
-
-            (i) No percentage will be added to Agency charges for packing, shipping, express, postage, telephone, telex, fax, travel expenses and other out of pocket expenses of Agency personnel; and
-            
-            (ii) Agency’s commission for outdoor advertising will be the standard rate allowed advertising agencies when such rate is less than [Outdoor Advertising Commission Rate].
-            
-             
-            
-            B. For those items where Agency is not compensated on a commission basis, Advertiser shall pay Agency on an hourly basis for services provided hereunder. The rate will be determined by the type of services provided and the person or persons providing such services, but in no event shall the rate exceed [Maximum Hourly Rate] per hour. Advertiser may elect in advance to be charged on this hourly rate basis. If Advertiser fails to notify Agency of its choice, it shall be presumed that Advertiser elected to be charged on an hourly rate basis.
-            
-             
-            
-            C. In the event that Agency undertakes, at Advertiser’s request subject to Advertiser’s prior approval, special projects such as those described in Section 1.F above, Agency shall prepare an estimate of total charges for any such special project, including therein any charges for materials or services purchased from outside sources. In the event that Advertiser elects to proceed with the special project based upon Agency’s estimated cost, Agency shall perform the services with respect to such special project at its estimated cost, subject to modification as mutually agreed by the parties.
-            
-             
-            
-            D. For any special project or other services provided by Agency pursuant to this Agreement upon which the parties have not agreed as to charges, Advertiser shall pay Agency at its regular hourly rates, not to exceed [Dollar Amount] per hour.
-            
-             
-            
-            E. Advertiser shall not be obligated to reimburse Agency for any travel or other out-of-pocket expenses incurred in the performance of services pursuant to this Agreement unless expressly agreed by Advertiser in advance.</div>
-      </div>
     </div>
-
-
-  <footer class="main-footer">
-    <strong>Copyright &copy;<a href="http://adminlte.io">Adgency</a>.</strong>
-    All rights reserved.
-  </footer>
-
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-    <!-- Control sidebar content goes here -->
-  </aside>
-  <!-- /.control-sidebar -->
-</div>
-<!-- ./wrapper -->
-
-<!-- jQuery -->
-<script src="plugins/jquery/jquery.min.js"></script>
-<!-- jQuery UI 1.11.4 -->
-<script src="plugins/jquery-ui/jquery-ui.min.js"></script>
-<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-<script>
-  $.widget.bridge('uibutton', $.ui.button)
-</script>
-<!-- Bootstrap 4 -->
-<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- ChartJS -->
-<script src="plugins/chart.js/Chart.min.js"></script>
-<!-- Sparkline -->
-<script src="plugins/sparklines/sparkline.js"></script>
-<!-- JQVMap -->
-<script src="plugins/jqvmap/jquery.vmap.min.js"></script>
-<script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
-<!-- jQuery Knob Chart -->
-<script src="plugins/jquery-knob/jquery.knob.min.js"></script>
-<!-- daterangepicker -->
-<script src="plugins/moment/moment.min.js"></script>
-<script src="plugins/daterangepicker/daterangepicker.js"></script>
-<!-- Tempusdominus Bootstrap 4 -->
-<script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
-<!-- Summernote -->
-<script src="plugins/summernote/summernote-bs4.min.js"></script>
-<!-- overlayScrollbars -->
-<script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-<!-- AdminLTE App -->
-<script src="dist/js/adminlte.js"></script>
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="dist/js/pages/dashboard.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="dist/js/demo.js"></script>
+    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    </div>
+    </div>
+    <script type="text/javascript" src="./assets/scripts/main.js"></script>
 </body>
+
 </html>

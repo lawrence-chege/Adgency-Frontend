@@ -56,7 +56,9 @@ const getConcept = () => {
         .then(response => response.json())
         .then(registerData => {
             data = registerData["data"]
-            companies = data["companies"]
+            localStorage.setItem("data", JSON.stringify(data))
+            resultData = JSON.parse(localStorage.getItem("data"));
+            companies = resultData["companies"]
             companies.forEach(company => {
                 company_name = company["company_name"]
                 let projects = company["projects"]
