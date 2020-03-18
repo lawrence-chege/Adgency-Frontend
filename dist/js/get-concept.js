@@ -56,7 +56,9 @@ const getConcept = () => {
         .then(response => response.json())
         .then(registerData => {
             data = registerData["data"]
-            companies = data["companies"]
+            localStorage.setItem("data", JSON.stringify(data))
+            resultData = JSON.parse(localStorage.getItem("data"));
+            companies = resultData["companies"]
             companies.forEach(company => {
                 company_name = company["company_name"]
                 let projects = company["projects"]
@@ -189,58 +191,3 @@ const getConcept = () => {
 
         })
 }
-
-
-// <li class="nav-item has-treeview menu-open">
-//             <a href="concept.html" class="nav-link active">
-//               <i class="nav-icon fas fa-tachometer-alt"></i>
-//               <p>
-//                 Company A
-//                 <i class="right fas fa-angle-left"></i>
-//               </p>
-//             </a>
-//             <ul class="nav nav-treeview">
-//               <li class="nav-item">
-//                 <a href="concept.html" class="nav-link active">
-//                   <i class="fa fa-info-circle nav-icon"></i>
-//                   <p>Concept</p>
-//                 </a>
-//               </li>
-//               <li class="nav-item">
-//                 <a href="#" class="nav-link">
-//                   <i class="fa fa-money nav-icon"></i>
-//                   <p>Quote</p>
-//                 </a>
-//               </li>
-//               <li class="nav-item">
-//                 <a href="contract.html" class="nav-link">
-//                   <i class="fa fa-thumbs-up nav-icon"></i>
-//                   <p>Contract</p>
-//                 </a>
-//               </li>
-//               <li class="nav-item">
-//                 <a href="ideation.html" class="nav-link">
-//                   <i class="fa fa-lightbulb-o nav-icon"></i>
-//                   <p>Ideation</p>
-//                 </a>
-//               </li>
-//               <li class="nav-item">
-//                 <a href="design.html" class="nav-link">
-//                   <i class="far fa-circle nav-icon"></i>
-//                   <p>Design</p>
-//                 </a>
-//               </li>
-//               <li class="nav-item">
-//                 <a href="personel.html" class="nav-link">
-//                   <i class="fa fa-users nav-icon"></i>
-//                   <p>Personel</p>
-//                 </a>
-//               </li>
-//               <li class="nav-item">
-//                 <a href="final.html" class="nav-link">
-//                   <i class="far fa-circle nav-icon"></i>
-//                   <p>Final Output</p>
-//                 </a>
-//               </li>
-//             </ul>
-//           </li>
