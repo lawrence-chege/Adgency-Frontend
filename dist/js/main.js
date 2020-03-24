@@ -185,7 +185,7 @@ var card = document.getElementById('card');
 var newTagline = document.getElementById('InputTagline');
 var newRationale = document.getElementById('InputRationale');
 
-form.addEventListener('submit', addTagline);
+// form.addEventListener('submit', addTagline);
 
 
 //Function to add item to the list
@@ -213,10 +213,10 @@ var modalBtn = document.getElementById('modalBtn');
 var closeBtn = document.getElementById('closeBtn');
 
 //Listen for Open Click
-modalBtn.addEventListener('click',openModal);
+// modalBtn.addEventListener('click',openModal);
 
 //Listen for Close Click
-closeBtn.addEventListener('click',closeModal);
+// closeBtn.addEventListener('click',closeModal);
 
 //Function to open Modal
 function openModal(){
@@ -237,7 +237,7 @@ var concept = document.getElementById('concept');
 var conceptBtn = document.getElementById('conceptBtn');
 
 //Listen for Open Click
-conceptBtn.addEventListener('click',openConcept);
+// conceptBtn.addEventListener('click',openConcept);
 
 //Function to open Concept
 function openConcept(){
@@ -247,7 +247,7 @@ function openConcept(){
 //TO COLLECT THE DATA ADDED TO THE FORM
 var ideaForm = document.getElementById('create');
 
-ideaForm.addEventListener('submit', addConcept);
+// ideaForm.addEventListener('submit', addConcept);
 
 function addConcept(e){
     e.preventDefault();

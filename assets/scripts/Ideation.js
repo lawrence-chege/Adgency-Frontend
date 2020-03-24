@@ -1,31 +1,47 @@
-const _ = (x) =>{
+const _ = (x) => {
   return document.getElementById(x);
 }
+const loading = () => {
 
-const genIdeas= () => {
-  fetch('http://072d3a26.ngrok.io/', {
-    method: 'POST',
-    body: JSON.stringify({
-      product: document.getElementById('product').value,
-      product_description: document.getElementById('product_description').value
-    }),
-    headers: {
-      'Content-type': 'application/json;'
-    }
-  })
+}
+
+const genIdeas = () => {
+  let table = _("IdeaTable")
+  let loader = _("loader")
+  table.classList.remove("show")
+  table.classList.add("hide")
+  loader.classList.remove("hide")
+  loader.classList.add("show")
+  setTimeout(function () {
+    table.classList.remove("hide")
+    table.classList.add("show")
+    loader.classList.remove("show")
+    loader.classList.add("hide")
+  }, 15000);
+
+  fetch('http://12d27511.ngrok.io/', {
+      method: 'POST',
+      body: JSON.stringify({
+        product: document.getElementById('product').value,
+        product_description: document.getElementById('product_description').value
+      }),
+      headers: {
+        'Content-type': 'application/json;'
+      }
+    })
     .then(response => response.json())
     .then(data => {
       let slogans = data["Slogans"]
       localStorage.setItem("slogans", JSON.stringify(slogans));
       slogans = JSON.parse(localStorage.getItem("slogans"));
-      
-      slogans.forEach(slogan=>{
+
+      slogans.forEach(slogan => {
         let comp = _("Ideas")
         let table_row = document.createElement('tr');
         comp.appendChild(table_row);
 
         let table_data = document.createElement('td');
-        table_data.innerHTML+= slogan
+        table_data.innerHTML += slogan
         table_row.appendChild(table_data);
 
         let table_data2 = document.createElement('td');
@@ -33,7 +49,7 @@ const genIdeas= () => {
 
         let table_data3 = document.createElement('td');
         table_row.appendChild(table_data3);
-        
+
         let i2 = document.createElement('button')
         i2.classList.add("btn-wide")
         i2.classList.add("btn")

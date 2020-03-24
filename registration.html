@@ -17,16 +17,16 @@
                 <li><a href="landingpage.html">Home</a></li>
                 <li><a href="landingpage.html">Features</a></li>
                 <li><a href="landingpage.html">Benefits</a></li>
-                <li><a href="landingpage.html">Pricing</a></l
+                <li><a href="landingpage.html">Pricing</a></li>
             </ul>
         </div>
     </nav>
     <div class="new-container">
         <div></div>
         <div class="login-container">
-            <form action="project-form.html" onsubmit>
+            <form id="registerForm">
                 <h2>Do More, Join Us!</h2>
-                <div class="input-div one">
+                <!-- <div class="input-div one">
                     <div class="i">
                         <i class="fas fa-user"></i>
                     </div>
@@ -34,32 +34,32 @@
                         <h5>Name</h5>
                         <input type="text" class="input" id="user_name">
                     </div>
-                </div>
+                </div> -->
                 <div class="input-div three">
                     <div class="i">
                         <i class="fas fa-at"></i>
                     </div>
                     <div>
                         <h5>Email Address</h5>
-                        <input type="text" class="input" id="email">
+                        <input type="text" class="input" name="email" id="email">
                     </div>
                 </div>
-                <div class="input-div four">
+                <!-- <div class="input-div four">
                     <div class="i">
                         <i class="fas fa-phone-volume"></i>
                     </div>
                     <div>
-                        <h5>Phone Number</h5>
+                        <h5>Phone Number</h5>onclick="login()"
                         <input type="tel" class="input" id="phone">
                     </div>
-                </div>
+                </div> -->
                 <div class="input-div five">
                     <div class="i">
                         <i class="fas fa-lock"></i>
                     </div>
                     <div>
                         <h5>Password</h5>
-                        <input type="password" class="input" id="password">
+                        <input type="password" class="input" name="password" id="password">
                     </div>
                 </div>
                 <input type="submit" class="btn" value="Next" >
@@ -69,49 +69,33 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="dist/js/simple-lightbox.min.js"></script>
     <script src="https://cdn.auth0.com/js/auth0/9.11/auth0.min.js"></script>
-<script type="text/javascript">
-  // Initialize app
-  var webAuth = new auth0.WebAuth({
-    domain:       'YOUR_DOMAIN',
-    clientID:     'YOUR_CLIENT_ID'
-  });
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-auth.js"></script>
 
-  // Trigger login with google
-  webAuth.authorize({
-    connection: 'google-oauth2'
-  });
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-analytics.js"></script>
+<script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCG7S3XpyINEF-D06WuvPTOMRg1FCe-fOk",
+            authDomain: "adgency-5e684.firebaseapp.com",
+            databaseURL: "https://adgency-5e684.firebaseio.com",
+            projectId: "adgency-5e684",
+            storageBucket: "adgency-5e684.appspot.com",
+            messagingSenderId: "751433502351",
+            appId: "1:751433502351:web:602a47bf30211429cdeafa",
+            measurementId: "G-73XSLEECYY"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+      </script>
 
-  // Trigger login with github
-  webAuth.authorize({
-    connection: 'github'
-  });
 
-  // Trigger login popup with twitter
-  webAuth.popup.authorize({
-    connection: 'twitter'
-  });
-</script>
-// Script uses auth0.js. See Remarks for details.
-<script src="https://cdn.auth0.com/js/auth0/9.11/auth0.min.js"></script>
-<script type="text/javascript">
-  // Initialize app
-  var webAuth = new auth0.WebAuth({
-    domain:       'YOUR_DOMAIN',
-    clientID:     'YOUR_CLIENT_ID'
-  });
-
-  // Calculate URL to redirect to
-  var url = webAuth.client.buildAuthorizeUrl({
-    clientID: 'YOUR_CLIENT_ID', // string
-    responseType: 'token', // code or token
-    redirectUri: 'http://localhost:5500/',
-    state: 'YOUR_STATE'
-  });
-
-  // Redirect to url
-  // ...
-</script>
     <script src="dist/js/main.js"></script>
     <script src="dist/js/client.js"></script>
+    <script type="text/javascript" src="./assets/scripts/firebase.js"></script>
 </body>
 </html>
