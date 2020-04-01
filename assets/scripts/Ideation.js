@@ -19,7 +19,7 @@ const genIdeas = () => {
     loader.classList.add("hide")
   }, 15000);
 
-  fetch('http://12d27511.ngrok.io/', {
+  fetch('http://61e82876.ngrok.io/', {
       method: 'POST',
       body: JSON.stringify({
         product: document.getElementById('product').value,
